@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Reem Kufi', sans-serif;
 }
 
 .navbar {
@@ -14,11 +15,9 @@
     color: #fff;
     position: relative;
     justify-content: space-between;
-    font-family: 'Times New Roman', serif;
 }
 
 .logo {
-    font-family: 'Reem Kufi', sans-serif;
     font-size: 1.5em;
     color: #ff7a59;
     text-decoration: none;
@@ -42,7 +41,6 @@
     text-decoration: none;
     padding: 10px 15px;
     display: block;
-    font-family: 'Times New Roman', serif;
 }
 
 .dropdown:hover .dropdown-menu {
@@ -76,7 +74,6 @@
     border-radius: 5px;
     color: #fff;
     text-decoration: none;
-    font-family: 'Times New Roman', serif;
     margin-right: 50px;
 }
 
@@ -122,10 +119,25 @@
     }
 }
 
+
+.container{
+    margin: 50px;   
+}
+
+.banner{
+    background-color: #34584a;
+    color: #f5f7f8;
+}
+
+.banner-card{
+    background-color: #34584a;
+    display: flex;
+    justify-content: center;
+}
+
 footer {
     background-color: #f5f7f8;
     padding: 20px 0;
-    font-family: 'Times New Roman', Times, serif;
     font-size: 14px;
     color: #333;
     text-align: center;
