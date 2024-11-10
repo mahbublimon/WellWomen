@@ -372,6 +372,161 @@ body {
     border: 1px solid #ddd;
 }
 
+/* Consultation Section */
+.consultation {
+    padding: 40px;
+    text-align: center;
+}
+
+.consultation h2 {
+    font-size: 2em;
+    color: #34584a;
+    margin-bottom: 10px;
+}
+
+.consultation p {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.consultant-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.consultant-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+}
+
+.consultant-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.consultant-card h4 {
+    color: #ff7a59;
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.consultant-card p {
+    font-size: 0.95em;
+    color: #666;
+}
+
+.btn {
+    display: inline-block;
+    padding: 8px 15px;
+    margin: 10px 5px 0;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.chamber-btn {
+    background-color: #34584a;
+    color: #fff;
+}
+
+.chamber-btn:hover {
+    background-color: #ff7a59;
+}
+
+.contact-btn {
+    background-color: #ff7a59;
+    color: #fff;
+}
+
+.contact-btn:hover {
+    background-color: #ff5722;
+}
+
+/* Fitness Program Section */
+.fitness-program {
+    padding: 40px;
+    text-align: center;
+}
+
+.fitness-program h2 {
+    font-size: 2em;
+    color: #34584a;
+    margin-bottom: 10px;
+}
+
+.fitness-program p {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.fitness-block {
+    margin-bottom: 50px;
+}
+
+.fitness-cards {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.fitness-card {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.fitness-card img {
+    width: 100%;
+    height: 150px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.fitness-card h4 {
+    color: #ff7a59;
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.fitness-card p {
+    font-size: 0.95em;
+    color: #666;
+}
+
+.details-btn {
+    background-color: #34584a;
+    color: #fff;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.details-btn:hover {
+    background-color: #ff7a59;
+}
+
+.details {
+    display: none;
+    margin-top: 10px;
+    color: #444;
+    font-size: 0.9em;
+}
+
 /* Footer */
 footer {
     background-color: #f5f7f8;

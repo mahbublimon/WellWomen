@@ -1,11 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>WellWoman - Fitness Program for Women</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="/home.html" class="logo">WellWoman</a>
+        <ul class="nav-links">
+            <li><a href="/home.html">Home</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/consultation.html">Consultation</a></li>
+            <li><a href="#fitness">Fitness Programs</a></li>
+            <li><a href="#nutrition">Nutrition Guidance</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#review">Review</a></li>
+        </ul>
+        <a href="#login" class="login">Login</a>
+        <div class="toggle-button">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Fitness Program Section -->
+    <section class="fitness-program">
+        <h2>Fitness Programs for Women</h2>
+        <p>Choose from a variety of fitness programs designed to meet your unique needs.</p>
+
+        <!-- Block 1 -->
+        <div class="fitness-block">
+            <h3>Strength & Conditioning</h3>
+            <div class="fitness-cards">
+                <!-- Card 1 -->
+                <div class="fitness-card">
+                    <img src="strength1.jpg" alt="Strength & Conditioning Image">
+                    <h4>Beginner Strength</h4>
+                    <p>Designed for women starting their fitness journey, focusing on building strength.</p>
+                    <button class="details-btn" onclick="showDetails('strength1')">Details</button>
+                    <div class="details" id="strength1">
+                        <p>Program for beginner-level strength training, focusing on improving muscle tone and overall
+                            strength.</p>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="fitness-card">
+                    <img src="strength2.jpg" alt="Strength & Conditioning Image">
+                    <h4>Advanced Strength</h4>
+                    <p>A program for women with prior experience looking to intensify their strength training.</p>
+                    <button class="details-btn" onclick="showDetails('strength2')">Details</button>
+                    <div class="details" id="strength2">
+                        <p>Advanced strength program designed for women who want to push their limits and build muscle
+                            mass.</p>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="fitness-card">
+                    <img src="strength3.jpg" alt="Strength & Conditioning Image">
+                    <h4>Core Strength</h4>
+                    <p>A targeted program to help strengthen your core and improve posture.</p>
+                    <button class="details-btn" onclick="showDetails('strength3')">Details</button>
+                    <div class="details" id="strength3">
+                        <p>Focusing on exercises that build a solid core, improving balance and flexibility.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Block 2 -->
+        <div class="fitness-block">
+            <h3>Cardio & Endurance</h3>
+            <div class="fitness-cards">
+                <!-- Card 1 -->
+                <div class="fitness-card">
+                    <img src="cardio1.jpg" alt="Cardio & Endurance Image">
+                    <h4>Beginner Cardio</h4>
+                    <p>Perfect for women new to cardio workouts, focusing on stamina and heart health.</p>
+                    <button class="details-btn" onclick="showDetails('cardio1')">Details</button>
+                    <div class="details" id="cardio1">
+                        <p>This program focuses on building endurance and stamina with moderate-intensity cardio
+                            exercises.</p>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="fitness-card">
+                    <img src="cardio2.jpg" alt="Cardio & Endurance Image">
+                    <h4>HIIT Cardio</h4>
+                    <p>A high-intensity interval training program that boosts fat burn and stamina.</p>
+                    <button class="details-btn" onclick="showDetails('cardio2')">Details</button>
+                    <div class="details" id="cardio2">
+                        <p>Intense bursts of cardio exercises followed by rest periods to maximize calorie burn.</p>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="fitness-card">
+                    <img src="cardio3.jpg" alt="Cardio & Endurance Image">
+                    <h4>Long-Distance Running</h4>
+                    <p>A program designed for women preparing for long-distance events or wanting to increase stamina.
+                    </p>
+                    <button class="details-btn" onclick="showDetails('cardio3')">Details</button>
+                    <div class="details" id="cardio3">
+                        <p>Long-duration running program to increase stamina and endurance over time, suitable for
+                            marathon training.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Block 3 -->
+        <div class="fitness-block">
+            <h3>Yoga & Flexibility</h3>
+            <div class="fitness-cards">
+                <!-- Card 1 -->
+                <div class="fitness-card">
+                    <img src="yoga1.jpg" alt="Yoga & Flexibility Image">
+                    <h4>Beginner Yoga</h4>
+                    <p>Ideal for women new to yoga, focusing on flexibility and mindfulness.</p>
+                    <button class="details-btn" onclick="showDetails('yoga1')">Details</button>
+                    <div class="details" id="yoga1">
+                        <p>Gentle yoga sessions to help improve flexibility, mindfulness, and stress relief.</p>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="fitness-card">
+                    <img src="yoga2.jpg" alt="Yoga & Flexibility Image">
+                    <h4>Power Yoga</h4>
+                    <p>An energetic yoga practice that focuses on strength, flexibility, and balance.</p>
+                    <button class="details-btn" onclick="showDetails('yoga2')">Details</button>
+                    <div class="details" id="yoga2">
+                        <p>A fast-paced, dynamic yoga style that blends strength and flexibility exercises for an
+                            invigorating workout.</p>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="fitness-card">
+                    <img src="yoga3.jpg" alt="Yoga & Flexibility Image">
+                    <h4>Restorative Yoga</h4>
+                    <p>A slower-paced yoga practice focused on relaxation and deep stretching.</p>
+                    <button class="details-btn" onclick="showDetails('yoga3')">Details</button>
+                    <div class="details" id="yoga3">
+                        <p>Relaxing and restorative yoga poses, helping to reduce stress and improve flexibility.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Block 4 -->
+        <div class="fitness-block">
+            <h3>Weight Loss Programs</h3>
+            <div class="fitness-cards">
+                <!-- Card 1 -->
+                <div class="fitness-card">
+                    <img src="weightloss1.jpg" alt="Weight Loss Image">
+                    <h4>Weight Loss 101</h4>
+                    <p>Perfect for women who want to kickstart their weight loss journey with easy-to-follow steps.</p>
+                    <button class="details-btn" onclick="showDetails('weightloss1')">Details</button>
+                    <div class="details" id="weightloss1">
+                        <p>A basic program combining diet and exercise to promote healthy weight loss and fat burning.
+                        </p>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="fitness-card">
+                    <img src="weightloss2.jpg" alt="Weight Loss Image">
+                    <h4>Advanced Weight Loss</h4>
+                    <p>A more intensive weight loss program with advanced workout techniques and a tailored nutrition
+                        plan.</p>
+                    <button class="details-btn" onclick="showDetails('weightloss2')">Details</button>
+                    <div class="details" id="weightloss2">
+                        <p>High-intensity interval training and a strict diet plan to accelerate fat loss and improve
+                            body composition.</p>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="fitness-card">
+                    <img src="weightloss3.jpg" alt="Weight Loss Image">
+                    <h4>Postpartum Weight Loss</h4>
+                    <p>Designed for new mothers who want to safely lose weight and regain fitness post-pregnancy.</p>
+                    <button class="details-btn" onclick="showDetails('weightloss3')">Details</button>
+                    <div class="details" id="weightloss3">
+                        <p>A gentle, postpartum-friendly program for new moms focusing on regaining strength and
+                            reducing baby weight.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // JavaScript to toggle details display
+        function showDetails(id) {
+            var details = document.getElementById(id);
+            if (details.style.display === "block") {
+                details.style.display = "none";
+            } else {
+                details.style.display = "block";
+            }
+        }
+    </script>
+
 </body>
+
 </html>
