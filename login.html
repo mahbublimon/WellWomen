@@ -4,24 +4,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WellWoman - Fitness Program for Women</title>
+    <title>WellWoman</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <!-- Navbar -->
     <nav class="navbar">
-        <a href="/home.html" class="logo">WellWoman</a>
+        <a href="home" class="logo">WellWoman</a>
         <ul class="nav-links">
-            <li><a href="/home.html">Home</a></li>
-            <li><a href="/about.html">About</a></li>
-            <li><a href="/consultation.html">Consultation</a></li>
-            <li><a href="#fitness">Fitness Programs</a></li>
-            <li><a href="#nutrition">Nutrition Guidance</a></li>
-            <li><a href="#faq">FAQ</a></li>
-            <li><a href="#review">Review</a></li>
+            <li><a href="home">Home</a></li>
+            <li><a href="about">About</a></li>
+            <li class="dropdown">
+                <a href="#services" class="dropdown-toggle">Services</a>
+                <ul class="dropdown-menu">
+                    <li><a href="consultation">Consultation</a></li>
+                    <li><a href="fitness">Fitness Programs</a></li>
+                    <li><a href="nutrition">Nutrition Guidance</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#resources" class="dropdown-toggle">Resources</a>
+                <ul class="dropdown-menu">
+                    <li><a href="articles">Articles</a></li>
+                    <li><a href="videos">Videos</a></li>
+                    <li><a href="guides">Guides</a></li>
+                </ul>
+            </li>
+            <li><a href="advice">Advice</a></li>
+            <li><a href="faq">FAQ</a></li>
+            <li><a href="review">Review</a></li>
         </ul>
-        <a href="#login" class="login">Login</a>
+        <a href="login" class="login">Login</a>
         <div class="toggle-button">
             <span></span>
             <span></span>
@@ -31,38 +45,33 @@
 
     <!-- Login Section -->
     <div class="login-container">
-        <div class="login-box">
-            <h2>Sign In</h2>
-
-            <!-- Email Input -->
-            <label for="email">Email</label>
-            <input type="email" id="email" placeholder="Enter your email">
-
-            <!-- Password Input -->
-            <label for="password">Password</label>
-            <input type="password" id="password" placeholder="Enter your password">
-
-            <!-- Forgot Password Link -->
-            <a href="#" class="forgot-password">Forgot or need a password?</a>
-
-            <!-- Sign In Button -->
-            <button class="sign-in-btn">SIGN IN</button>
-
-            <!-- Sign Up Link -->
-            <p class="sign-up-text">Don’t have an account? <a href="#">Sign Up</a></p>
-
-            <!-- Divider -->
-            <div class="divider">or</div>
-
-            <!-- Social Sign-In Options -->
-            <div class="social-sign-in">
-                <button class="social-btn facebook">Sign in with Facebook</button>
-                <button class="social-btn google">Sign in with Google</button>
-                <button class="social-btn apple">Sign in with Apple</button>
-                <button class="social-btn microsoft">Sign in with Microsoft</button>
+        <div class="left-column">
+            <div class="quote">
+                <h2>"The only bad workout is the one that didn't happen."</h2>
+                <p>- Anonymous</p>
+            </div>
+        </div>
+        <div class="right-column">
+            <div class="login-box">
+                <h2>Sign In</h2>
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter your email">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter your password">
+                <a href="#" class="forgot-password">Forgot or need a password?</a>
+                <button class="sign-in-btn">SIGN IN</button>
+                <p class="sign-up-text">Don’t have an account? <a href="#">Sign Up</a></p>
+                <div class="divider">or</div>
+                <div class="social-sign-in-icons">
+                    <a href="#" class="social-icon facebook" aria-label="Sign in with Facebook"></a>
+                    <a href="#" class="social-icon google" aria-label="Sign in with Google"></a>
+                    <a href="#" class="social-icon apple" aria-label="Sign in with Apple"></a>
+                    <a href="#" class="social-icon microsoft" aria-label="Sign in with Microsoft"></a>
+                </div>
             </div>
         </div>
     </div>
+
     <!-- Footer -->
     <footer>
         <div class="footer-content">
