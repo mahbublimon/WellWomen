@@ -1,8 +1,15 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const toggleButton = document.querySelector(".toggle-button");
-    const navLinks = document.querySelector(".nav-links");
+    const faqItems = document.querySelectorAll(".faq-item");
 
-    toggleButton.addEventListener("click", () => {
-        navLinks.classList.toggle("active");
+    faqItems.forEach((item) => {
+        const question = item.querySelector(".question");
+        const answer = item.querySelector(".answer");
+
+        if (question && answer) {
+            question.addEventListener("click", () => {
+                // Toggle answer visibility
+                answer.style.display = answer.style.display === "block" ? "none" : "block";
+            });
+        }
     });
 });
