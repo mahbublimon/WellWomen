@@ -988,9 +988,9 @@ hr {
     .footer-content, .footer-bottom {
         flex-direction: column;
         text-align: center;
-    }
-
+        
     .footer-links, .social-icons {
         margin-top: 10px;
     }
+}
 }
