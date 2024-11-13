@@ -45,51 +45,60 @@
             <span></span>
         </div>
     </nav>
-    <!-- Nutrition Page Section -->
-    <section class="nutrition-page">
-        <!-- Block 1: Healthy Eating Basics -->
-        <div class="nutrition-block">
-            <img src="healthy-eating.jpg" alt="Healthy Eating Basics" class="block-image">
-            <div class="content">
-                <h2>Healthy Eating Basics</h2>
-                <p>Learn the fundamentals of balanced nutrition tailored for women’s unique needs. Focus on whole foods
-                    rich in essential vitamins, lean proteins, healthy fats, and complex carbs. Remember to eat a
-                    variety of colors for energy, mood, and longevity.</p>
-            </div>
-        </div>
+    <!-- Contact Us Section -->
+    <section class="contact-section">
+        <h2>Contact Us</h2>
+        <p>Use this form to reach out to our Customer Success Team regarding any questions, concerns, or feedback. You
+            can also view our FAQ for quick answers to commonly asked questions.</p>
 
-        <!-- Block 2: Nutrition for Different Life Stages -->
-        <div class="nutrition-block">
-            <img src="life-stages.jpg" alt="Nutrition for Different Life Stages" class="block-image">
-            <div class="content">
-                <h2>Nutrition for Every Stage of Life</h2>
-                <p>Discover how women’s nutritional needs shift through life stages, from adolescence and pregnancy to
-                    menopause and beyond. Ensure adequate intake of calcium, iron, folate, and omega-3s at each stage
-                    for optimal health.</p>
-            </div>
-        </div>
+        <!-- Contact Type Selection -->
+        <form action="#" method="POST" class="contact-form">
+            <label for="contact-type">Type of contact:</label>
+            <select id="contact-type" name="contact-type">
+                <option value="support">I am a registered client and I need support.</option>
+                <option value="therapist-support">I am a current WellWoman healthcare professional and I need support.
+                </option>
+                <option value="therapist-application">I am a therapist interested in joining or a current applicant.
+                </option>
+                <option value="general-question">I have a question about the service.</option>
+                <option value="billing">I have a billing-related question.</option>
+                <option value="press">I have a press-related question.</option>
+                <option value="business-inquiry">I have a business-related inquiry.</option>
+                <option value="organization">I'm interested in WellWoman for my organization.</option>
+            </select>
 
-        <!-- Block 3: Boosting Immunity Through Nutrition -->
-        <div class="nutrition-block">
-            <img src="immunity-boosting.jpg" alt="Boost Your Immunity" class="block-image">
-            <div class="content">
-                <h2>Boost Your Immunity with Food</h2>
-                <p>Support your immune system with foods rich in Vitamin C, zinc, and probiotics. Include citrus fruits,
-                    nuts, seeds, and fermented foods to keep your body resilient and combat illness naturally.</p>
-            </div>
-        </div>
+            <!-- User Information -->
+            <label for="first-name">First Name</label>
+            <input type="text" id="first-name" name="first-name" required>
 
-        <!-- Block 4: Meal Planning & Mindful Eating -->
-        <div class="nutrition-block">
-            <img src="meal-planning.jpg" alt="Meal Planning & Mindful Eating" class="block-image">
-            <div class="content">
-                <h2>Meal Planning & Mindful Eating</h2>
-                <p>Adopt mindful eating and meal planning strategies to make balanced choices that suit your lifestyle.
-                    Slow down, listen to your body’s cues, and enjoy every bite for a fulfilling approach to eating
-                    well.</p>
-            </div>
+            <label for="last-name">Last Name</label>
+            <input type="text" id="last-name" name="last-name" required>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <!-- Disclaimer -->
+            <p>By clicking “Submit” you agree to the processing of your personal information for the purpose of
+                responding to this inquiry. For more information about how we use and retain your information, please
+                see our <a href="#">Privacy Policy</a>.</p>
+
+            <!-- Submit Button -->
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+
+        <!-- Contact Information -->
+        <div class="contact-info">
+            <p><strong>WellWoman</strong></p>
+            <p>990 Villa Street, Mountain View, CA 94041</p>
+            <p>USA</p>
+            <p>Email: <a href="mailto:contact@wellwoman.com">contact@wellwoman.com</a></p>
         </div>
     </section>
+
+    <script src="script.js"></script>
     <!-- Footer -->
     <footer>
         <div class="footer-content">
