@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WellWoman</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="home" class="logo">WellWoman</a>
+
+        <ul class="nav-links">
+            <li><a href="home">Home</a></li>
+            <li><a href="about">About</a></li>
+            <li class="dropdown">
+                <a href="#services" class="dropdown-toggle">Services</a>
+                <ul class="dropdown-menu">
+                    <li><a href="consultation">Consultation</a></li>
+                    <li><a href="fitness">Fitness Programs</a></li>
+                    <li><a href="nutrition">Nutrition Guidance</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#resources" class="dropdown-toggle">Resources</a>
+                <ul class="dropdown-menu">
+                    <li><a href="articles">Articles</a></li>
+                    <li><a href="videos">Videos</a></li>
+                    <li><a href="guides">Guides</a></li>
+                </ul>
+            </li>
+            <li><a href="advice">Advice</a></li>
+            <li><a href="faq">FAQ</a></li>
+            <li><a href="review">Review</a></li>
+        </ul>
+
+        <a href="login" class="login">Login</a>
+
+        <div class="toggle-button">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+    <!-- Careers Intro Section -->
+    <section class="careers">
+        <h1>Join the WellWomen Team</h1>
+        <p class="intro-text">We are passionate professionals driven to enhance women’s wellness. Join us in making a
+            difference!</p>
+        <div class="button-wrapper">
+            <a href="#open-positions" class="view-positions-button">View Open Positions</a>
+        </div>
+    </section>
+
+    <!-- WellWomen DNA Section -->
+    <section class="dna-section">
+        <h2>The WellWomen DNA</h2>
+        <div class="dna-grid">
+            <div class="dna-card left">
+                <h3>Constant Growth</h3>
+                <p>We’re committed to evolving, learning, and improving continuously to make a lasting impact on
+                    wellness.</p>
+            </div>
+            <div class="dna-card right">
+                <h3>Choose Your Path</h3>
+                <p>Empowered to take ownership, our team drives personal and organizational success through initiative
+                    and curiosity.</p>
+            </div>
+            <div class="dna-card left">
+                <h3>Open Communication</h3>
+                <p>We prioritize transparency and authenticity, creating a space for meaningful connections and open
+                    dialogues.</p>
+            </div>
+            <div class="dna-card right">
+                <h3>Better Together</h3>
+                <p>Collaboration is at our core. We enjoy a respectful, ego-free work environment where everyone thrives
+                    together.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Perks Section -->
+    <section class="perks-section">
+        <h2>Perks of Working at WellWomen</h2>
+        <div class="perks-grid">
+            <div class="perk-card left">
+                <h3>Wellness Support</h3>
+                <p>Access to mental health resources, health benefits, and tools to support your overall wellbeing.</p>
+            </div>
+            <div class="perk-card right">
+                <h3>Collaborative Environment</h3>
+                <p>We host virtual and in-person events to build connections and foster team spirit.</p>
+            </div>
+            <div class="perk-card left">
+                <h3>Competitive Compensation</h3>
+                <p>Enjoy competitive pay, retirement plans, and financial benefits for long-term success.</p>
+            </div>
+            <div class="perk-card right">
+                <h3>Flexible Work Options</h3>
+                <p>Our work-from-home and office policies provide the best of both flexibility and collaboration.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Stories Section with Slider -->
+    <section class="team-stories">
+        <h2>Team Stories</h2>
+        <div class="story-slider">
+            <button class="slider-btn left" onclick="prevStory()">&#10094;</button>
+            <div class="story-card">
+                <img src="team-member1.jpg" alt="Jane Doe">
+                <p>"Working at WellWomen has allowed me to grow in skills and knowledge. I’m proud to be part of a
+                    mission-driven company."</p>
+                <span>— Jane Doe, Software Engineer</span>
+            </div>
+            <div class="story-card">
+                <img src="team-member2.jpg" alt="John Smith">
+                <p>"I began as an intern, and today, I’m a project manager. The support and growth opportunities here
+                    are incredible."</p>
+                <span>— John Smith, Project Manager</span>
+            </div>
+            <!-- Add more team stories here as needed -->
+            <button class="slider-btn right" onclick="nextStory()">&#10095;</button>
+        </div>
+    </section>
+
+    <!-- Open Positions Section -->
+    <section id="open-positions" class="positions">
+        <h2>Open Positions</h2>
+        <div class="positions-grid">
+            <div class="position-card">
+                <h3>Therapist - Remote</h3>
+                <p>Provide virtual therapy sessions and support clients in achieving wellness goals.</p>
+                <a href="apply.html" class="apply-button">Apply</a>
+            </div>
+            <div class="position-card">
+                <h3>Marketing Manager - Remote</h3>
+                <p>Lead marketing initiatives to reach and engage our community on various platforms.</p>
+                <a href="apply.html" class="apply-button">Apply</a>
+            </div>
+            <div class="position-card">
+                <h3>Software Developer - Mountain View, CA</h3>
+                <p>Develop and maintain core applications for our platform in a collaborative environment.</p>
+                <a href="apply.html" class="apply-button">Apply</a>
+            </div>
+            <div class="position-card">
+                <h3>Data Analyst - Remote</h3>
+                <p>Analyze data trends to help drive strategic business and wellness-focused decisions.</p>
+                <a href="apply.html" class="apply-button">Apply</a>
+            </div>
+            <div class="position-card">
+                <h3>Product Designer - Remote</h3>
+                <p>Design intuitive and beautiful user experiences to support our wellness community.</p>
+                <a href="apply.html" class="apply-button">Apply</a>
+            </div>
+            <div class="position-card">
+                <h3>Clinical Operations Manager - France</h3>
+                <p>Oversee clinical operations and ensure the highest standards of care for our clients.</p>
+                <a href="apply.html" class="apply-button">Apply</a>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+
+    <body>
+        <!-- Navbar -->
+        <nav class="navbar">
+            <a href="home" class="logo">WellWoman</a>
+
+            <ul class="nav-links">
+                <li><a href="home">Home</a></li>
+                <li><a href="about">About</a></li>
+                <li class="dropdown">
+                    <a href="#services" class="dropdown-toggle">Services</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="consultation">Consultation</a></li>
+                        <li><a href="fitness">Fitness Programs</a></li>
+                        <li><a href="nutrition">Nutrition Guidance</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#resources" class="dropdown-toggle">Resources</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="articles">Articles</a></li>
+                        <li><a href="videos">Videos</a></li>
+                        <li><a href="guides">Guides</a></li>
+                    </ul>
+                </li>
+                <li><a href="advice">Advice</a></li>
+                <li><a href="faq">FAQ</a></li>
+                <li><a href="review">Review</a></li>
+            </ul>
+
+            <a href="login" class="login">Login</a>
+
+            <div class="toggle-button">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Resources</a>
+                <a href="#">Advice</a>
+                <a href="#">FAQ</a>
+                <a href="#">Review</a>
+                <a href="#">Contact</a>
+                <a href="#">Careers</a>
+
+                <div class="social-icons">
+                    <a href="#" class="icon fb" aria-label="Facebook"></a>
+                    <a href="#" class="icon ig" aria-label="Instagram"></a>
+                    <a href="#" class="icon tiktok" aria-label="TikTok"></a>
+                    <a href="#" class="icon twitter" aria-label="Twitter"></a>
+                    <a href="#" class="icon linkedin" aria-label="LinkedIn"></a>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="footer-bottom">
+                <div class="footer-links">
+                    <a href="#">Terms & Conditions</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Web Accessibility</a>
+                    <span>&copy; 2024 WellWomen</span>
+                </div>
+            </div>
+        </footer>
+    </body>
+
+</html>
