@@ -182,8 +182,8 @@ body {
 .answer {
     display: none; /* Hide answers by default */
     padding: 10px;
-    background-color: #fff;
-    border: 1px solid #ddd;
+    background-color: transparent;
+    border: 1px transparent;
     border-top: none;
     border-radius: 0 0 5px 5px;
     font-size: 1em;
@@ -560,6 +560,430 @@ body {
     font-size: 0.9em;
 }
 
+/* Nutrition Page Styling */
+.nutrition-page {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 900px;
+}
+
+.nutrition-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    overflow: hidden;
+}
+
+.block-image {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+}
+
+.content {
+    padding: 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.8em;
+    color: #34584a;
+    margin: 10px 0;
+}
+
+p {
+    font-size: 1em;
+    color: #666666;
+    line-height: 1.6;
+}
+
+/* Articles Grid Styling */
+.articles-section {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.articles-section h2 {
+    font-size: 2em;
+    color: #34584a;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.articles-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.article {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s;
+}
+
+.article:hover {
+    transform: scale(1.03);
+}
+
+.article-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.article-content {
+    padding: 15px;
+    text-align: left;
+}
+
+.article-content h3 {
+    font-size: 1.4em;
+    color: #34584a;
+    margin-bottom: 10px;
+}
+
+.article-content p {
+    font-size: 0.95em;
+    color: #666666;
+    line-height: 1.5;
+}
+
+.read-more {
+    font-size: 0.9em;
+    color: #ff7a59;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Styling */
+@media (max-width: 992px) {
+    .articles-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .articles-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .article-image {
+        height: 200px;
+    }
+}
+
+/* Guides Grid Styling */
+.guides-section {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.guides-section h2 {
+    font-size: 2em;
+    color: #34584a;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.guides-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.guide-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.guide-card:hover {
+    transform: scale(1.03);
+}
+
+.guide-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.guide-content {
+    padding: 15px;
+    text-align: left;
+}
+
+.guide-content h3 {
+    font-size: 1.4em;
+    color: #34584a;
+    margin-bottom: 10px;
+}
+
+.guide-content p {
+    font-size: 0.95em;
+    color: #666666;
+    line-height: 1.5;
+}
+
+.read-more {
+    font-size: 0.9em;
+    color: #ff7a59;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Styling */
+@media (max-width: 992px) {
+    .guides-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .guide-image {
+        height: 200px;
+    }
+}
+
+/* Advice Grid Layout */
+.advice-section {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.advice-section h2 {
+    font-size: 2.5em;
+    color: #34584a;
+    margin-bottom: 10px;
+}
+
+.advice-intro {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 30px;
+}
+.advice-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.advice-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: left;
+    transition: transform 0.3s;
+}
+
+.advice-card:hover {
+    transform: scale(1.05);
+}
+
+.advice-icon {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.advice-content {
+    padding: 15px;
+}
+
+.advice-content h3 {
+    font-size: 1.6em;
+    color: #34584a;
+    margin: 10px 0;
+}
+
+.advice-content p {
+    font-size: 1em;
+    color: #666;
+    line-height: 1.5;
+}
+
+.learn-more {
+    font-size: 0.95em;
+    color: #ff7a59;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.learn-more:hover {
+    text-decoration: underline;
+}
+
+/* FAQ Layout */
+.faq-section {
+    width: 80%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.faq-section h2 {
+    font-size: 2.5em;
+    color: #34584a;
+    margin-bottom: 20px;
+}
+
+.faq-container {
+    text-align: left;
+    margin-top: 20px;
+}
+
+.faq-item {
+    margin: 10px 0;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.question {
+    font-size: 1.2em;
+    color: #34584a;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.answer {
+    display: none;
+    font-size: 1em;
+    color: #555;
+    margin-top: 5px;
+}
+
+/* Call-to-Action Styling */
+.cta {
+    margin-top: 40px;
+    font-size: 1.2em;
+    color: #34584a;
+}
+
+.cta-button {
+    background-color: #34584a;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.1em;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.cta-button:hover {
+    background-color: #ff7a59;
+}
+
+/* Contact Section */
+.contact-section {
+    width: 80%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: transparent;
+}
+
+.contact-section h2 {
+    font-size: 2.5em;
+    color: #34584a;
+    margin-bottom: 20px;
+}
+
+.contact-section p {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Form Styling */
+.contact-form {
+    display: grid;
+    gap: 15px;
+    text-align: left;
+}
+
+.contact-form label {
+    font-size: 1.1em;
+    color: #34584a;
+}
+
+.contact-form input, .contact-form select, .contact-form textarea {
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.contact-form select, .contact-form textarea {
+    width: 100%;
+}
+
+.contact-form button {
+    padding: 12px 20px;
+    background-color: #34584a;
+    color: #fff;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.contact-form button:hover {
+    background-color: #ff7a59;
+}
+
+/* Disclaimer Text */
+.contact-form p {
+    font-size: 0.9em;
+    color: #888;
+}
+
+/* Contact Information Styling */
+.contact-info {
+    margin-top: 40px;
+    font-size: 1.2em;
+    color: #555;
+}
+
+.contact-info a {
+    color: #34584a;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
 /* Layout for Login Section */
 .login-container {
     display: grid;
@@ -728,6 +1152,7 @@ body {
 .social-btn:hover {
     opacity: 0.9;
 }
+
 /* Layout for Login Section */
 .login-container {
     display: grid;
@@ -987,7 +1412,9 @@ hr {
         top: 100%;
         left: 0;
     }
-
+    .faq-section {
+        width: 90%;
+    }
     .nav-links li {
         text-align: center;
         width: 100%;
@@ -1004,10 +1431,32 @@ hr {
     .problem-section, .solution-section, .review-grid {
         grid-template-columns: 1fr;
     }
-    .login-container {
+    .nutrition-block {
+        flex-direction: row;
+    }
+
+    .block-image {
+        width: 50%;
+        height: auto;
+    }
+    .advice-grid {
         grid-template-columns: 1fr;
     }
 
+    .advice-icon {
+        height: 200px;
+    }
+    .content {
+        width: 50%;
+        padding: 40px;
+        text-align: left;
+    }
+    .login-container {
+        grid-template-columns: 1fr;
+    }
+    .contact-section {
+        width: 90%;
+    }
     .right-column {
         max-width: 100%;
         padding: 20px;
