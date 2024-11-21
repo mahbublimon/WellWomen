@@ -55,7 +55,7 @@ body {
 .dropdown-menu {
     display: none;
     position: absolute;
-    background-color: transparent;
+    background-color: white;
     top: 100%;
     left: 0;
     min-width: 150px;
@@ -173,6 +173,130 @@ body {
 .feature p {
     font-size: 0.9em;
     margin-top: 5px;
+}
+
+/* Calculator Section */
+.calculator-section {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: #f9f9f9;
+}
+
+.calculator-section h1 {
+    font-size: 2.5rem;
+    color: #34584a;
+    margin-bottom: 1rem;
+}
+
+.calculator-section p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+.calculator-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 0 1rem;
+}
+
+.calculator-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-decoration: none;
+    color: #333;
+}
+
+.calculator-card h2 {
+    font-size: 1.5rem;
+    color: #34584a;
+    margin-bottom: 0.5rem;
+}
+
+.calculator-card p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.calculator-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    border-color: #34584a;
+}
+
+/* Calculator Styles */
+.calculator-main {
+    max-width: 600px;
+    margin: 50px auto;
+    text-align: center;
+    padding: 20px;
+    background: #f4f4f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.calculator-main h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.calculator-main p {
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.calculator-main form label {
+    display: block;
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 1em;
+}
+
+.calculator-main form input,
+.calculator-main form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.calculator-main form button {
+    background-color: #34584a;
+    color: white;
+    cursor: pointer;
+}
+
+.calculator-main form button:hover {
+    background-color: #ff7a59;
+}
+
+.calculator-main #result {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #34584a;
+}
+
+/* Embryo Type Dropdown Specific Styles */
+select#embryo-type {
+    background-color: #ffffff;
+    border-color: #ddd;
+    padding: 12px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+select#embryo-type option {
+    padding: 10px;
 }
 
 /* FAQ Section Styles */
@@ -1186,6 +1310,239 @@ h2 {
     background-color: #2c4a3f;
 }
 
+/* Subscription Section */
+/* Hero Section */
+.empower-her {
+    background-color: #ff7a59;
+    color: #fff;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero-content h1 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    background-color: #fff;
+    color: #34584a;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 1.1em;
+    text-decoration: none;
+}
+
+.cta-button:hover {
+    background-color: #ff5722;
+    color: #fff;
+}
+
+/* Achievements Section */
+.achievements {
+    background-color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.stat {
+    text-align: center;
+    max-width: 300px;
+}
+
+.stat h3 {
+    font-size: 2.5em;
+    color: #34584a;
+}
+
+.stat p {
+    font-size: 1.1em;
+    color: #666;
+}
+
+/* Why Choose WellWoman Premium Section */
+.why-choose {
+    background-color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.why-choose h2 {
+    font-size: 2.5em;
+    color: #34584a;
+    margin-bottom: 20px;
+}
+
+.why-choose ul {
+    list-style-type: none;
+    margin-top: 30px;
+}
+
+.why-choose li {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+/* Testimonials Section */
+.testimonials {
+    background-color: #f5f5f5;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.testimonials blockquote {
+    font-size: 1.2em;
+    font-style: italic;
+    color: #34584a;
+    border-left: 5px solid #ff7a59;
+    padding-left: 15px;
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+/* How It Works Section */
+.how-it-works {
+    background-color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.how-it-works h2 {
+    font-size: 2.5em;
+    color: #34584a;
+    margin-bottom: 20px;
+}
+
+.how-it-works ul {
+    list-style-type: none;
+    margin-top: 30px;
+}
+
+.how-it-works li {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+/* Impact Section */
+.impact {
+    background-color: #ff7a59;
+    color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.impact-stats {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.impact-stat {
+    text-align: center;
+    max-width: 300px;
+}
+
+.impact-stat h3 {
+    font-size: 2.5em;
+    color: #fff;
+}
+
+.impact-stat p {
+    font-size: 1.1em;
+    color: #fff;
+}
+
+/* Subscription Plans Section */
+.subscription-plans {
+    background-color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.subscription-plans h2 {
+    font-size: 2.5em;
+    color: #34584a;
+    margin-bottom: 20px;
+}
+
+.plans {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.plan {
+    background-color: #f5f5f5;
+    width: 300px;
+    padding: 30px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.plan h3 {
+    font-size: 2em;
+    color: #34584a;
+    margin-bottom: 15px;
+}
+
+.plan p {
+    font-size: 1.5em;
+    color: #ff7a59;
+    margin-bottom: 15px;
+}
+
+.plan ul {
+    list-style-type: none;
+    margin-bottom: 15px;
+}
+
+.plan li {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.plan .cta-button {
+    background-color: #ff7a59;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.plan .cta-button:hover {
+    background-color: #ff5722;
+}
+
+/* Future Vision Section */
+.future-vision {
+    background-color: #ff7a59;
+    color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.future-vision h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.future-vision p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
 /* Layout for Login Section */
 .login-container {
     display: grid;
@@ -1494,7 +1851,237 @@ h2 {
     transition: opacity 0.2s ease;
 }
 
+/* Signup Container */
+.signup-container {
+    display: flex;
+    height: calc(100vh - 60px);
+    background: #f4f4f9;
+}
+
+/* Signup Box */
+.signup-box {
+    max-width: 400px;
+    width: 100%;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.signup-box h2 {
+    margin-bottom: 1rem;
+    color: #333;
+    text-align: center;
+}
+
+.signup-box label {
+    display: block;
+    margin-top: 1rem;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+.signup-box input[type="text"], 
+.signup-box input[type="email"], 
+.signup-box input[type="password"], 
+.signup-box input[type="file"] {
+    width: 100%;
+    padding: 0.8rem;
+    margin-top: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.signup-box .sign-up-btn {
+    width: 100%;
+    padding: 0.8rem;
+    margin-top: 1.5rem;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+
+.signup-box .sign-up-btn:hover {
+    background-color: #218838;
+}
+
+.signup-box .sign-in-text {
+    text-align: center;
+    margin-top: 1rem;
+    color: #555;
+}
+
+.signup-box .sign-in-text a {
+    color: #28a745;
+    text-decoration: none;
+}
+
+/* Divider */
+.divider {
+    text-align: center;
+    color: #888;
+    margin: 1.5rem 0;
+    font-size: 0.9rem;
+}
+
 /* Set specific icons for each platform */
+.social-icon.facebook {
+    background-image: url('path/to/facebook-icon.png');
+    background-color: #3b5998;
+}
+
+.social-icon.google {
+    background-image: url('path/to/google-icon.png');
+    background-color: #db4437;
+}
+
+.social-icon.apple {
+    background-image: url('path/to/apple-icon.png');
+    background-color: #333333;
+}
+
+.social-icon.microsoft {
+    background-image: url('path/to/microsoft-icon.png');
+    background-color: #f3ba04;
+}
+
+/* Hover effect for social icons */
+.social-icon:hover {
+    opacity: 0.8;
+}
+
+/* Signup Page Specific Styles */
+
+/* Signup Container */
+.signup-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #f4f4f9;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Signup Box - Fixed Centered Layout */
+.signup-box {
+    max-width: 400px;
+    width: 100%;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    overflow: hidden; /* Ensures content fits within the box */
+}
+
+/* Remove max-height and overflow from right-column if it was there */
+.right-column {
+    width: 100%;
+    max-width: 400px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    overflow: hidden; /* Ensures no scrollbars inside */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.signup-box h2 {
+    margin-bottom: 1rem;
+    color: #333;
+    font-size: 1.8em;
+}
+
+/* Form Field Styles for Signup Page */
+.signup-box label {
+    display: block;
+    margin-top: 1rem;
+    color: #555;
+    font-size: 0.9rem;
+    text-align: left;
+}
+
+.signup-box input[type="text"], 
+.signup-box input[type="email"], 
+.signup-box input[type="password"], 
+.signup-box input[type="file"] {
+    width: 100%;
+    padding: 0.8rem;
+    margin-top: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+/* Signup Button */
+.signup-box .sign-up-btn {
+    width: 100%;
+    padding: 0.8rem;
+    margin-top: 1.5rem;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+
+.signup-box .sign-up-btn:hover {
+    background-color: #218838;
+}
+
+/* Prompt for Existing Users */
+.signup-box .sign-in-text {
+    text-align: center;
+    margin-top: 1rem;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+.signup-box .sign-in-text a {
+    color: #28a745;
+    text-decoration: none;
+}
+
+.signup-box .sign-in-text a:hover {
+    text-decoration: underline;
+}
+
+/* Divider */
+.divider {
+    text-align: center;
+    color: #888;
+    margin: 1.5rem 0;
+    font-size: 0.9rem;
+}
+
+/* Social Icon Styles */
+.social-sign-in-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    background-size: cover;
+    border-radius: 50%;
+    transition: opacity 0.2s ease;
+}
+
+/* Social Icon Background Colors (Replace with correct image paths) */
 .social-icon.facebook {
     background-image: url('path/to/facebook-icon.png');
     background-color: #3b5998;
