@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Due Date Calculator by Ultrasound</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="home.html" class="logo">WellWoman</a>
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li class="dropdown">
+                <a href="#services" class="dropdown-toggle">Services</a>
+                <ul class="dropdown-menu">
+                    <li><a href="consultation.html">Consultation</a></li>
+                    <li><a href="fitness.html">Fitness Programs</a></li>
+                    <li><a href="nutrition.html">Nutrition Guidance</a></li>
+                </ul>
+            </li>
+            <li><a href="calculators.html">Calculators</a></li>
+            <li><a href="advice.html">Advice</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="review.html">Review</a></li>
+            <li><a href="subscription.html">Manage Subscription</a></li>
+        </ul>
+        <a href="login.html" class="login">Login</a>
+    </nav>
+
+    <!-- Calculator -->
+    <main class="calculator-main">
+        <h1>Due Date Calculator by Ultrasound</h1>
+        <p>Calculate your due date based on ultrasound measurements of the fetus.</p>
+
+        <form>
+            <label for="ultrasound-date">Date of Ultrasound:</label>
+            <input type="date" id="ultrasound-date" required>
+            <label for="gestational-age">Gestational Age (weeks):</label>
+            <input type="number" id="gestational-age" min="0" required>
+            <button type="button" onclick="calculateUltrasoundDueDate()">Calculate</button>
+        </form>
+
+        <p id="result"></p>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <a href="home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="resources.html">Resources</a>
+            <a href="advice.html">Advice</a>
+            <a href="faq.html">FAQ</a>
+            <a href="review.html">Review</a>
+            <a href="contact.html">Contact</a>
+            <a href="careers.html">Careers</a>
+
+            <div class="social-icons">
+                <a href="#" class="icon fb" aria-label="Facebook"></a>
+                <a href="#" class="icon ig" aria-label="Instagram"></a>
+                <a href="#" class="icon tiktok" aria-label="TikTok"></a>
+                <a href="#" class="icon twitter" aria-label="Twitter"></a>
+                <a href="#" class="icon linkedin" aria-label="LinkedIn"></a>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="footer-bottom">
+            <div class="footer-links">
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Web Accessibility</a>
+                <span>&copy; 2024 WellWomen</span>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

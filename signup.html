@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WellWoman</title>
+    <title>Sign Up - WellWoman</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -35,38 +35,45 @@
             <li><a href="faq">FAQ</a></li>
             <li><a href="review">Review</a></li>
         </ul>
-        <a href="login" class="login">Login</a>
-        <div class="toggle-button">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
+        <a href="login.html" class="login">Login</a>
     </nav>
 
-    <!-- Login Section -->
-    <div class="login-container">
+    <!-- Signup Section -->
+    <div class="signup-container">
         <div class="left-column">
             <div class="quote">
-                <h2>"The only bad workout is the one that didn't happen."</h2>
-                <p>- Anonymous</p>
+                <h2>"Empowering women, one step at a time."</h2>
+                <p>- WellWoman</p>
             </div>
         </div>
         <div class="right-column">
-            <div class="login-box">
-                <h2>Sign In</h2>
+            <div class="signup-box">
+                <h2>Create Your Account</h2>
+
+                <label for="name">Full Name</label>
+                <input type="text" id="name" placeholder="Enter your full name">
+
                 <label for="email">Email</label>
                 <input type="email" id="email" placeholder="Enter your email">
+
                 <label for="password">Password</label>
-                <input type="password" id="password" placeholder="Enter your password">
-                <a href="#" class="forgot-password">Forgot or need a password?</a>
-                <button class="sign-in-btn">SIGN IN</button>
-                <p class="sign-up-text">Don’t have an account? <a href="#">Sign Up</a></p>
-                <div class="divider">or</div>
+                <input type="password" id="password" placeholder="Create a password">
+
+                <label for="nid">Upload NID/Passport</label>
+                <input type="file" id="nid" accept=".pdf, .jpg, .jpeg, .png">
+
+                <button class="sign-up-btn">SIGN UP</button>
+
+                <p class="sign-in-text">Already have an account? <a href="login.html">Sign In</a></p>
+
+                <div class="divider">or sign up with</div>
+
+                <!-- Social Signup Options -->
                 <div class="social-sign-in-icons">
-                    <a href="#" class="social-icon facebook" aria-label="Sign in with Facebook"></a>
-                    <a href="#" class="social-icon google" aria-label="Sign in with Google"></a>
-                    <a href="#" class="social-icon apple" aria-label="Sign in with Apple"></a>
-                    <a href="#" class="social-icon microsoft" aria-label="Sign in with Microsoft"></a>
+                    <a href="#" class="social-icon facebook" aria-label="Sign up with Facebook"></a>
+                    <a href="#" class="social-icon google" aria-label="Sign up with Google"></a>
+                    <a href="#" class="social-icon apple" aria-label="Sign up with Apple"></a>
+                    <a href="#" class="social-icon microsoft" aria-label="Sign up with Microsoft"></a>
                 </div>
             </div>
         </div>
