@@ -127,84 +127,86 @@
         </div>
     </section>
 
-    <!-- Subscription Plans Section -->
     <section class="subscription-plans" id="join">
         <h2>Choose Your Subscription Plan</h2>
+        <div class="pricing-toggle">
+            <span>Monthly</span>
+            <label class="switch">
+                <input type="checkbox" id="toggle-pricing" onchange="togglePricing()">
+                <span class="slider"></span>
+            </label>
+            <span>Annually (Save 16%)</span>
+        </div>
+
         <div class="plans">
-            <!-- Basic Plan -->
             <div class="plan">
-                <h3>Wellness Explorer - Free</h3>
-                <p>$0/month</p>
+                <h3>Wellness Explorer</h3>
+                <p id="price1">Free</p>
                 <ul>
                     <li>Access to basic health tracking features</li>
                     <li>Limited community support (view-only)</li>
                     <li>Basic health articles and tips</li>
                 </ul>
-                <a href="#" class="cta-button">Subscribe</a>
+                <button onclick="subscribe('Wellness Explorer')" class="cta-button">Subscribe</button>
             </div>
 
-            <!-- Bronze Plan -->
             <div class="plan">
-                <h3>Health Supporter - $9.99/month</h3>
-                <p>$9.99/month</p>
+                <h3>Health Supporter</h3>
+                <p id="price2">$9.99/month</p>
                 <ul>
                     <li>Access to all basic health tracking features</li>
                     <li>Community support and expert advice</li>
                     <li>Access to basic health calculators (e.g., Period, Ovulation)</li>
                 </ul>
-                <a href="#" class="cta-button">Subscribe</a>
+                <button onclick="subscribe('Health Supporter')" class="cta-button">Subscribe</button>
             </div>
 
-            <!-- Silver Plan -->
             <div class="plan">
-                <h3>Wellness Advocate - $19.99/month</h3>
-                <p>$19.99/month</p>
+                <h3>Wellness Advocate</h3>
+                <p id="price3">$19.99/month</p>
                 <ul>
                     <li>All features from Health Supporter plan</li>
                     <li>Priority community support and personalized health advice</li>
                     <li>Full access to all health calculators</li>
                     <li>Free monthly health consultations</li>
                 </ul>
-                <a href="#" class="cta-button">Subscribe</a>
+                <button onclick="subscribe('Wellness Advocate')" class="cta-button">Subscribe</button>
             </div>
 
-            <!-- Gold Plan -->
             <div class="plan">
-                <h3>Empowerment Supporter - $39.99/month</h3>
-                <p>$39.99/month</p>
+                <h3>Empowerment Supporter</h3>
+                <p id="price4">$39.99/month</p>
                 <ul>
                     <li>All features from Wellness Advocate plan</li>
                     <li>Exclusive webinars and workshops on health and wellness</li>
                     <li>Access to premium health content and guides</li>
                     <li>Two free consultations per month with health experts</li>
                 </ul>
-                <a href="#" class="cta-button">Subscribe</a>
+                <button onclick="subscribe('Empowerment Supporter')" class="cta-button">Subscribe</button>
             </div>
 
-            <!-- Platinum Plan -->
             <div class="plan">
-                <h3>Holistic Wellness Champion - $69.99/month</h3>
-                <p>$69.99/month</p>
+                <h3>Holistic Wellness Champion</h3>
+                <p id="price5">$69.99/month</p>
                 <ul>
                     <li>All features from Empowerment Supporter plan</li>
                     <li>Unlimited health consultations with experts</li>
                     <li>Access to full library of premium content</li>
                     <li>Exclusive support for mental and physical wellness</li>
                 </ul>
-                <a href="#" class="cta-button">Subscribe</a>
+                <button onclick="subscribe('Holistic Wellness Champion')" class="cta-button">Subscribe</button>
             </div>
 
-            <!-- Diamond Plan -->
             <div class="plan">
-                <h3>Ultimate Wellness Concierge - $149.99/month</h3>
-                <p>$149.99/month</p>
+                <h3>Ultimate Wellness Concierge</h3>
+                <p id="price6">$149.99/month</p>
                 <ul>
                     <li>All features from Holistic Wellness Champion plan</li>
                     <li>Dedicated wellness concierge support</li>
                     <li>Specialized fertility, pregnancy, and mental wellness support</li>
                     <li>Personalized wellness plans for individual needs</li>
                 </ul>
-                <a href="#" class="cta-button">Subscribe</a>
+                <button onclick="subscribe('Ultimate Wellness Concierge')" class="cta-button">Subscribe</button>
             </div>
         </div>
     </section>
