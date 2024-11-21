@@ -4,80 +4,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up - WellWoman</title>
+    <title>WellWomen - Create Account</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <!-- Navbar -->
     <nav class="navbar">
-        <a href="home" class="logo">WellWoman</a>
+        <a href="home" class="logo">WellWomen</a>
         <ul class="nav-links">
             <li><a href="home">Home</a></li>
             <li><a href="about">About</a></li>
-            <li class="dropdown">
-                <a href="#services" class="dropdown-toggle">Services</a>
-                <ul class="dropdown-menu">
-                    <li><a href="consultation">Consultation</a></li>
-                    <li><a href="fitness">Fitness Programs</a></li>
-                    <li><a href="nutrition">Nutrition Guidance</a></li>
-                </ul>
-            </li>
-            <li class="dropdown">
-                <a href="#resources" class="dropdown-toggle">Resources</a>
-                <ul class="dropdown-menu">
-                    <li><a href="articles">Articles</a></li>
-                    <li><a href="videos">Videos</a></li>
-                    <li><a href="guides">Guides</a></li>
-                </ul>
-            </li>
-            <li><a href="advice">Advice</a></li>
+            <li><a href="services">Services</a></li>
+            <li><a href="calculators">Calculators</a></li>
             <li><a href="faq">FAQ</a></li>
             <li><a href="review">Review</a></li>
+            <li><a href="manage-subscription">Manage Subscription</a></li>
         </ul>
-        <a href="login.html" class="login">Login</a>
+        <a href="login" class="login">Login</a>
     </nav>
 
-    <!-- Signup Section -->
-    <div class="signup-container">
-        <div class="left-column">
-            <div class="quote">
-                <h2>"Empowering women, one step at a time."</h2>
-                <p>- WellWoman</p>
-            </div>
-        </div>
-        <div class="right-column">
-            <div class="signup-box">
-                <h2>Create Your Account</h2>
-
-                <label for="name">Full Name</label>
-                <input type="text" id="name" placeholder="Enter your full name">
-
-                <label for="email">Email</label>
-                <input type="email" id="email" placeholder="Enter your email">
-
-                <label for="password">Password</label>
-                <input type="password" id="password" placeholder="Create a password">
-
-                <label for="nid">Upload NID/Passport</label>
-                <input type="file" id="nid" accept=".pdf, .jpg, .jpeg, .png">
-
-                <button class="sign-up-btn">SIGN UP</button>
-
-                <p class="sign-in-text">Already have an account? <a href="login.html">Sign In</a></p>
-
-                <div class="divider">or sign up with</div>
-
-                <!-- Social Signup Options -->
-                <div class="social-sign-in-icons">
-                    <a href="#" class="social-icon facebook" aria-label="Sign up with Facebook"></a>
-                    <a href="#" class="social-icon google" aria-label="Sign up with Google"></a>
-                    <a href="#" class="social-icon apple" aria-label="Sign up with Apple"></a>
-                    <a href="#" class="social-icon microsoft" aria-label="Sign up with Microsoft"></a>
+    <!-- Signup Form -->
+    <section class="signup-form">
+        <div class="form-container">
+            <h2>Create a WellWomen Account</h2>
+            <p>Enter your details and pick a password that's at least 15 characters, with both lowercase and uppercase letters.</p>
+            
+            <form id="signupForm" action="submit-form" method="POST" enctype="multipart/form-data">
+                <!-- First Name -->
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" name="firstName" required placeholder="Your first name">
                 </div>
+
+                <!-- Email -->
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required placeholder="Your email address">
+                </div>
+
+                <!-- Password -->
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <div class="password-field">
+                        <input type="password" id="password" name="password" required placeholder="Create a password">
+                        <span class="toggle-eye" onclick="togglePassword('password')">👁️</span>
+                    </div>
+                </div>
+
+                <!-- Confirm Password -->
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <div class="password-field">
+                        <input type="password" id="confirmPassword" name="confirmPassword" required placeholder="Confirm your password">
+                        <span class="toggle-eye" onclick="togglePassword('confirmPassword')">👁️</span>
+                    </div>
+                </div>
+
+                <!-- NID/Passport Upload -->
+                <div class="form-group">
+                    <label for="nidPassport">Upload NID/Passport (Required)</label>
+                    <input type="file" id="nidPassport" name="nidPassport" required>
+                </div>
+
+                <!-- Terms, Privacy, and Data Processing Agreements -->
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms" class="checkbox-label">I agree to WellWomen's <a href="terms-of-service">Terms of Service</a></label>
+                </div>
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="privacy" name="privacy" required>
+                    <label for="privacy" class="checkbox-label">I have read WellWomen's <a href="privacy-policy">Privacy Policy</a></label>
+                </div>
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="dataProcessing" name="dataProcessing" required>
+                    <label for="dataProcessing" class="checkbox-label">I agree to WellWomen processing the health data I choose to share with the app, so they can provide their service.</label>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="form-group">
+                    <button type="submit" class="cta-button">Create Account</button>
+                </div>
+
+                <p>Already have an account? <a href="login">Login here</a></p>
+            </form>
+
+            <!-- Social Media Signup -->
+            <div class="social-signup">
+                <p>Or sign up with:</p>
+                <button class="social-button facebook">Facebook</button>
+                <button class="social-button google">Google</button>
+                <button class="social-button apple">Apple</button>
+                <button class="social-button microsoft">Microsoft</button>
             </div>
         </div>
-    </div>
+    </section>
 
     <!-- Footer -->
     <footer>
@@ -86,17 +107,16 @@
             <a href="about">About</a>
             <a href="services">Services</a>
             <a href="resources">Resources</a>
-            <a href="advice">Advice</a>
             <a href="faq">FAQ</a>
             <a href="review">Review</a>
             <a href="contact">Contact</a>
             <a href="careers">Careers</a>
             <div class="social-icons">
-                <a href="#" class="icon fb" aria-label="Facebook"></a>
-                <a href="#" class="icon ig" aria-label="Instagram"></a>
-                <a href="#" class="icon tiktok" aria-label="TikTok"></a>
-                <a href="#" class="icon twitter" aria-label="Twitter"></a>
-                <a href="#" class="icon linkedin" aria-label="LinkedIn"></a>
+                <a href="#" class="icon fb"></a>
+                <a href="#" class="icon ig"></a>
+                <a href="#" class="icon tiktok"></a>
+                <a href="#" class="icon twitter"></a>
+                <a href="#" class="icon linkedin"></a>
             </div>
         </div>
         <hr>
@@ -105,12 +125,12 @@
                 <a href="#">Terms & Conditions</a>
                 <a href="#">Privacy Policy</a>
                 <a href="#">Web Accessibility</a>
-                <span>&copy; 2024 WellWoman</span>
+                <span>&copy; 2024 WellWomen</span>
             </div>
         </div>
     </footer>
-</body>
 
-<script src="script.js"></script>
+    <script src="script.js"></script>
+</body>
 
 </html>

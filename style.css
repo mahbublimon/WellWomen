@@ -1463,66 +1463,120 @@ h2 {
     color: #fff;
 }
 
-/* Subscription Plans Section */
 .subscription-plans {
-    background-color: #fff;
-    padding: 50px 20px;
     text-align: center;
+    padding: 50px;
+    background-color: #f9f9f9;
 }
 
-.subscription-plans h2 {
-    font-size: 2.5em;
-    color: #34584a;
-    margin-bottom: 20px;
+.pricing-toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.pricing-toggle span {
+    font-size: 18px;
+    margin: 0 10px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 30px;
+    transition: 0.4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 24px;
+    width: 24px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+input:checked + .slider {
+    background-color: #4CAF50;
+}
+
+input:checked + .slider:before {
+    transform: translateX(30px);
 }
 
 .plans {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
 }
 
 .plan {
-    background-color: #f5f5f5;
-    width: 300px;
-    padding: 30px;
-    margin: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensure content is evenly spaced */
+    height: 100%; /* Make all boxes equal height */
+    text-align: left;
 }
 
 .plan h3 {
-    font-size: 2em;
-    color: #34584a;
-    margin-bottom: 15px;
-}
-
-.plan p {
-    font-size: 1.5em;
-    color: #ff7a59;
-    margin-bottom: 15px;
-}
-
-.plan ul {
-    list-style-type: none;
-    margin-bottom: 15px;
-}
-
-.plan li {
-    font-size: 1.1em;
+    font-size: 24px;
     margin-bottom: 10px;
 }
 
+.plan p {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #333;
+}
+
+.plan ul {
+    margin: 20px 0;
+    padding-left: 20px;
+}
+
+.plan ul li {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
 .plan .cta-button {
-    background-color: #ff7a59;
-    color: #fff;
-    padding: 15px 30px;
-    border-radius: 5px;
+    margin-top: auto; /* Push the button to the bottom of the container */
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
     text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    align-self: center; /* Center the button horizontally */
 }
 
 .plan .cta-button:hover {
-    background-color: #ff5722;
+    background-color: #45a049;
 }
 
 /* Future Vision Section */
@@ -1954,157 +2008,201 @@ h2 {
     opacity: 0.8;
 }
 
-/* Signup Page Specific Styles */
-
-/* Signup Container */
-.signup-container {
+/* Signup Form Styles */
+.signup-form {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    background-color: #f8f8f8;
     min-height: 100vh;
-    background: #f4f4f9;
-    padding: 20px;
-    box-sizing: border-box;
 }
 
-/* Signup Box - Fixed Centered Layout */
-.signup-box {
-    max-width: 400px;
-    width: 100%;
-    padding: 2rem;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    overflow: hidden; /* Ensures content fits within the box */
-}
-
-/* Remove max-height and overflow from right-column if it was there */
-.right-column {
-    width: 100%;
-    max-width: 400px;
-    background-color: rgba(255, 255, 255, 0.9);
+.form-container {
+    background-color: #ffffff;
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    overflow: hidden; /* Ensures no scrollbars inside */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.signup-box h2 {
-    margin-bottom: 1rem;
-    color: #333;
-    font-size: 1.8em;
-}
-
-/* Form Field Styles for Signup Page */
-.signup-box label {
-    display: block;
-    margin-top: 1rem;
-    color: #555;
-    font-size: 0.9rem;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px;
     text-align: left;
 }
 
-.signup-box input[type="text"], 
-.signup-box input[type="email"], 
-.signup-box input[type="password"], 
-.signup-box input[type="file"] {
-    width: 100%;
-    padding: 0.8rem;
-    margin-top: 0.5rem;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-size: 1em;
+h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
 }
 
-/* Signup Button */
-.signup-box .sign-up-btn {
+p {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-item input[type="checkbox"] {
+    margin-right: 10px;
+    margin-left: 0;
+}
+
+.checkbox-label {
+    font-size: 14px;
+    color: #333;
+}
+
+label {
+    font-size: 14px;
+    color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="file"],
+input[type="checkbox"],
+input[type="submit"] {
     width: 100%;
-    padding: 0.8rem;
-    margin-top: 1.5rem;
-    background-color: #28a745;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.password-field {
+    position: relative;
+}
+
+.password-field .toggle-eye {
+    position: absolute;
+    top: 50%;
+    right: 10px;
     cursor: pointer;
-    font-size: 1rem;
-    transition: background 0.3s;
+    transform: translateY(-50%);
 }
 
-.signup-box .sign-up-btn:hover {
-    background-color: #218838;
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
 }
 
-/* Prompt for Existing Users */
-.signup-box .sign-in-text {
+button:hover {
+    background-color: #0056b3;
+}
+
+.cta-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.cta-button:hover {
+    background-color: #45a049;
+}
+
+.social-signup {
+    margin-top: 20px;
+}
+
+.social-button {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.social-button.facebook {
+    background-color: #3b5998;
+    color: white;
+}
+
+.social-button.google {
+    background-color: #db4437;
+    color: white;
+}
+
+.social-button.apple {
+    background-color: #000000;
+    color: white;
+}
+
+.social-button.microsoft {
+    background-color: #2d88ff;
+    color: white;
+}
+
+/* Footer */
+footer {
+    background-color: #f8f8f8;
+    padding: 20px;
     text-align: center;
-    margin-top: 1rem;
-    color: #555;
-    font-size: 0.9rem;
 }
 
-.signup-box .sign-in-text a {
-    color: #28a745;
+footer .footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+footer .footer-content a {
+    color: #333;
+    margin: 0 15px;
     text-decoration: none;
 }
 
-.signup-box .sign-in-text a:hover {
-    text-decoration: underline;
-}
-
-/* Divider */
-.divider {
-    text-align: center;
-    color: #888;
-    margin: 1.5rem 0;
-    font-size: 0.9rem;
-}
-
-/* Social Icon Styles */
-.social-sign-in-icons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 15px;
-}
-
-.social-icon {
-    width: 40px;
-    height: 40px;
+footer .footer-content .social-icons a {
+    margin: 0 10px;
     display: inline-block;
+}
+
+footer .footer-content .social-icons a.icon {
+    width: 24px;
+    height: 24px;
     background-size: cover;
-    border-radius: 50%;
-    transition: opacity 0.2s ease;
+    display: block;
 }
 
-/* Social Icon Background Colors (Replace with correct image paths) */
-.social-icon.facebook {
-    background-image: url('path/to/facebook-icon.png');
-    background-color: #3b5998;
+footer .footer-bottom {
+    text-align: center;
+    margin-top: 20px;
 }
 
-.social-icon.google {
-    background-image: url('path/to/google-icon.png');
-    background-color: #db4437;
+footer .footer-bottom a {
+    font-size: 14px;
+    color: #333;
+    margin: 0 10px;
 }
 
-.social-icon.apple {
-    background-image: url('path/to/apple-icon.png');
-    background-color: #333333;
-}
-
-.social-icon.microsoft {
-    background-image: url('path/to/microsoft-icon.png');
-    background-color: #f3ba04;
-}
-
-/* Hover effect for social icons */
-.social-icon:hover {
-    opacity: 0.8;
+footer .footer-bottom span {
+    font-size: 12px;
+    color: #777;
 }
 
 /* Footer */

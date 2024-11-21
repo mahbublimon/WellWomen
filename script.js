@@ -172,3 +172,47 @@ function calculateUltrasoundDueDate() {
     document.getElementById('result').innerText = 
         `Your estimated due date is: ${dueDate.toDateString()}`;
 }
+
+const monthlyPrices = [0, 9.99, 19.99, 39.99, 69.99, 149.99]; // Monthly prices in USD
+const annualPrices = monthlyPrices.map(price => (price * 12 * 0.84).toFixed(2)); // 16% discount for annual prices
+
+function togglePricing() {
+    const isAnnual = document.getElementById("toggle-pricing").checked;
+
+    const currency = navigator.language === 'bn-BD' || navigator.language === 'bd' ? 'BDT' : 'USD';
+    const conversionRate = currency === 'BDT' ? 85 : 1;
+
+    const priceElements = [
+        document.getElementById("price1"),
+        document.getElementById("price2"),
+        document.getElementById("price3"),
+        document.getElementById("price4"),
+        document.getElementById("price5"),
+        document.getElementById("price6")
+    ];
+
+    priceElements.forEach((el, index) => {
+        const price = isAnnual ? annualPrices[index] : monthlyPrices[index];
+        const convertedPrice = (price * conversionRate).toFixed(2);
+
+        if (index === 0) {
+            el.textContent = "Free";
+        } else {
+            el.textContent = `${convertedPrice} ${currency} / ${isAnnual ? "year" : "month"}`;
+        }
+    });
+}
+
+function subscribe(plan) {
+    alert(`Redirecting to payment gateway for the ${plan} plan.`);
+}
+
+// Password Visibility Toggle
+function togglePassword(fieldId) {
+    var passwordField = document.getElementById(fieldId);
+    if (passwordField.type === "password") {
+        passwordField.type = "text";
+    } else {
+        passwordField.type = "password";
+    }
+}
