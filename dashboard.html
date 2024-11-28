@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WellWomen Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar Menu -->
+        <aside class="sidebar">
+            <div class="menu">
+                <a href="dashboard" class="menu-item" title="Home">
+                    <img src="icons/home-icon.png" alt="Home">
+                </a>
+                <a href="questions" class="menu-item" title="Questions">
+                    <img src="icons/questions-icon.png" alt="Questions">
+                </a>
+                <a href="notifications" class="menu-item" title="Notifications">
+                    <img src="icons/notification-icon.png" alt="Notifications">
+                </a>
+                <a href="message" class="menu-item" title="Message with Doctor">
+                    <img src="icons/message-icon.png" alt="Message">
+                </a>
+                <a href="medical-history" class="menu-item" title="Medical History">
+                    <img src="icons/medical-history-icon.png" alt="Medical History">
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Navigation -->
+            <div class="top-section">
+                <div class="top-left">
+                    <button class="nav-button">Make an Appointment</button>
+                </div>
+                <div class="top-right">
+                    <button class="nav-button">Upload Report</button>
+                    <button class="nav-button">User Profile</button>
+                </div>
+            </div>
+
+            <!-- Content Area -->
+            <div class="content-area">
+                <!-- Left Section: Upcoming Appointments and Appointment History -->
+                <div class="left-content">
+                    <!-- Upcoming Appointments -->
+                    <div class="appointment-box">
+                        <h3>Upcoming Appointments</h3>
+                        <div class="appointment-item">
+                            <span><strong>Dr. Sarah Connor</strong></span>
+                            <span>Follow-up Visit</span>
+                            <span>Date: Dec 15, 2024 | Time: 2:00 PM</span>
+                            <div class="appointment-actions">
+                                <button class="appointment-button">Reschedule</button>
+                                <button class="appointment-button">Cancel</button>
+                                <button class="appointment-button">Join Video</button>
+                            </div>
+                        </div>
+                        <!-- Add more upcoming appointments here -->
+                    </div>
+
+                    <!-- Appointment History -->
+                    <div class="appointment-box">
+                        <h3>Appointment History</h3>
+                        <div class="appointment-item">
+                            <span><strong>Dr. John Doe</strong></span>
+                            <span>Follow-up Visit</span>
+                            <span>Date: Nov 20, 2024 | Time: 10:30 AM</span>
+                            <div class="appointment-actions">
+                                <button class="appointment-button">Reschedule</button>
+                                <button class="appointment-button">Cancel</button>
+                                <button class="appointment-button">View Assessment</button>
+                            </div>
+                        </div>
+                        <!-- Add more appointment history here -->
+                    </div>
+                </div>
+
+                <!-- Right Section: Chat with Coordinator -->
+                <div class="right-content">
+                    <div class="chat-box">
+                        <h3>Chat with Coordinator</h3>
+                        <div class="chat-messages">
+                            <p><strong>Coordinator:</strong> Hello! How can I assist you?</p>
+                            <p><strong>You:</strong> I have a question about my next appointment.</p>
+                            <!-- Add more chat messages dynamically -->
+                        </div>
+                        <div class="chat-input">
+                            <input type="text" placeholder="Type your message...">
+                            <button class="send-button">Send</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>
