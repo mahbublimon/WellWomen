@@ -216,3 +216,63 @@ function togglePassword(fieldId) {
         passwordField.type = "password";
     }
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    const chatMessages = document.getElementById("chat-messages");
+    const messageInput = document.getElementById("message-input");
+    const sendMessageButton = document.getElementById("send-message");
+    const typingIndicator = document.getElementById("typing-indicator");
+    const usernameDisplay = document.getElementById("username-display");
+    const onlineUsersDisplay = document.getElementById("online-users");
+
+    let username = localStorage.getItem("communityUsername");
+    let typingTimeout;
+
+    // Generate a random username if not already assigned
+    if (!username) {
+        username = `User_${Math.floor(Math.random() * 10000)}`;
+        localStorage.setItem("communityUsername", username);
+    }
+
+    usernameDisplay.textContent = username;
+
+    // Simulate online users count (can be replaced with a server call)
+    const onlineUsers = Math.floor(Math.random() * 50) + 1;
+    onlineUsersDisplay.textContent = onlineUsers;
+
+    // Event Listener: Message Input (Typing Indicator)
+    messageInput.addEventListener("input", () => {
+        clearTimeout(typingTimeout);
+        showTypingIndicator();
+
+        // Hide the indicator after 2 seconds of inactivity
+        typingTimeout = setTimeout(hideTypingIndicator, 2000);
+    });
+
+    // Send Message Functionality
+    sendMessageButton.addEventListener("click", () => {
+        const message = messageInput.value.trim();
+        if (message !== "") {
+            appendMessage(username, message);
+            messageInput.value = "";
+        }
+    });
+
+    // Append Message to Chat
+    function appendMessage(user, message) {
+        const messageElement = document.createElement("p");
+        messageElement.innerHTML = `<strong>${user}:</strong> ${message}`;
+        chatMessages.appendChild(messageElement);
+        chatMessages.scrollTop = chatMessages.scrollHeight; // Auto-scroll to the bottom
+    }
+
+    // Show Typing Indicator
+    function showTypingIndicator() {
+        typingIndicator.style.display = "block";
+    }
+
+    // Hide Typing Indicator
+    function hideTypingIndicator() {
+        typingIndicator.style.display = "none";
+    }
+});

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Page</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar Menu -->
+        <aside class="sidebar">
+            <div class="menu">
+                <a href="dashboard.html" class="menu-item" title="Home">
+                    <img src="icons/home-icon.png" alt="Home">
+                </a>
+                <a href="questions.html" class="menu-item" title="Questions">
+                    <img src="icons/questions-icon.png" alt="Questions">
+                </a>
+                <a href="notifications.html" class="menu-item" title="Notifications">
+                    <img src="icons/notification-icon.png" alt="Notifications">
+                </a>
+                <a href="message.html" class="menu-item" title="Message with Doctor">
+                    <img src="icons/message-icon.png" alt="Message">
+                </a>
+                <a href="medical-history.html" class="menu-item" title="Medical History">
+                    <img src="icons/medical-history-icon.png" alt="Medical History">
+                </a>
+                <a href="community.html" class="menu-item active" title="Community">
+                    <img src="icons/community-icon.png" alt="Community">
+                </a>
+            </div>
+        </aside>
+
+        <!-- Community Page Content -->
+        <main class="main-content">
+            <h2>Community Page</h2>
+            <p>Welcome to the community chat! Your username is <strong id="username-display"></strong>.</p>
+            <p><strong>Users Online:</strong> <span id="online-users">0</span></p>
+
+            <!-- Chat Section -->
+            <div class="chat-box">
+                <h3>Community Chat</h3>
+                <div class="chat-messages" id="chat-messages">
+                    <!-- Chat messages will appear here -->
+                </div>
+                <div class="typing-indicator" id="typing-indicator" style="display: none;">
+                    Someone is typing...
+                </div>
+                <div class="chat-input">
+                    <input type="text" id="message-input" placeholder="Type your message...">
+                    <button id="send-message">Send</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
