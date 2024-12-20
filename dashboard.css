@@ -17,11 +17,11 @@ body {
 /* Sidebar Menu */
 .sidebar {
     background-color: #4CAF50;
-    width: 80px;
+    width: 250px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px 0;
+    padding: 20px 0;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -184,7 +184,7 @@ body {
     margin: 10px 0;
 }
 
-/* Chat Box */
+/* Chat Box Styling (Consistency) */
 .chat-box {
     background-color: white;
     padding: 15px;

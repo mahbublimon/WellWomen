@@ -5,83 +5,121 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Due Date Calculator by Ultrasound</title>
-    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <script defer src="script.js"></script>
 </head>
 
 <body>
     <!-- Navbar -->
-    <nav class="navbar">
-        <a href="home.html" class="logo">WellWoman</a>
-        <ul class="nav-links">
-            <li><a href="home.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li class="dropdown">
-                <a href="#services" class="dropdown-toggle">Services</a>
-                <ul class="dropdown-menu">
-                    <li><a href="consultation.html">Consultation</a></li>
-                    <li><a href="fitness.html">Fitness Programs</a></li>
-                    <li><a href="nutrition.html">Nutrition Guidance</a></li>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a href="home.html" class="navbar-brand">WellWoman</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#services" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="consultation.html">Consultation</a></li>
+                            <li><a class="dropdown-item" href="fitness.html">Fitness Programs</a></li>
+                            <li><a class="dropdown-item" href="nutrition.html">Nutrition Guidance</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="calculators.html">Calculators</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="advice.html">Advice</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="faq.html">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="review.html">Review</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="subscription.html">Manage Subscription</a>
+                    </li>
                 </ul>
-            </li>
-            <li><a href="calculators.html">Calculators</a></li>
-            <li><a href="advice.html">Advice</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-            <li><a href="review.html">Review</a></li>
-            <li><a href="subscription.html">Manage Subscription</a></li>
-        </ul>
-        <a href="login.html" class="login">Login</a>
+                <a href="login.html" class="btn btn-outline-primary">Login</a>
+            </div>
+        </div>
     </nav>
 
     <!-- Calculator -->
-    <main class="calculator-main">
-        <h1>Due Date Calculator by Ultrasound</h1>
-        <p>Calculate your due date based on ultrasound measurements of the fetus.</p>
+    <main class="container mt-5">
+        <h1 class="text-center mb-4">Due Date Calculator by Ultrasound</h1>
+        <p class="text-center mb-4">Calculate your due date based on ultrasound measurements of the fetus.</p>
 
         <form>
-            <label for="ultrasound-date">Date of Ultrasound:</label>
-            <input type="date" id="ultrasound-date" required>
-            <label for="gestational-age">Gestational Age (weeks):</label>
-            <input type="number" id="gestational-age" min="0" required>
-            <button type="button" onclick="calculateUltrasoundDueDate()">Calculate</button>
+            <div class="mb-3">
+                <label for="ultrasound-date" class="form-label">Date of Ultrasound:</label>
+                <input type="date" id="ultrasound-date" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="gestational-age" class="form-label">Gestational Age (weeks):</label>
+                <input type="number" id="gestational-age" class="form-control" min="0" required>
+            </div>
+            <button type="button" class="btn btn-primary" onclick="calculateUltrasoundDueDate()">Calculate</button>
         </form>
 
-        <p id="result"></p>
+        <p id="result" class="mt-4 text-center"></p>
     </main>
 
     <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <a href="home.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="services.html">Services</a>
-            <a href="resources.html">Resources</a>
-            <a href="advice.html">Advice</a>
-            <a href="faq.html">FAQ</a>
-            <a href="review.html">Review</a>
-            <a href="contact.html">Contact</a>
-            <a href="careers.html">Careers</a>
-
-            <div class="social-icons">
-                <a href="#" class="icon fb" aria-label="Facebook"></a>
-                <a href="#" class="icon ig" aria-label="Instagram"></a>
-                <a href="#" class="icon tiktok" aria-label="TikTok"></a>
-                <a href="#" class="icon twitter" aria-label="Twitter"></a>
-                <a href="#" class="icon linkedin" aria-label="LinkedIn"></a>
+    <footer class="bg-light py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <a href="home.html" class="footer-link">Home</a>
+                    <a href="about.html" class="footer-link">About</a>
+                    <a href="services.html" class="footer-link">Services</a>
+                    <a href="resources.html" class="footer-link">Resources</a>
+                    <a href="advice.html" class="footer-link">Advice</a>
+                    <a href="faq.html" class="footer-link">FAQ</a>
+                    <a href="review.html" class="footer-link">Review</a>
+                    <a href="contact.html" class="footer-link">Contact</a>
+                    <a href="careers.html" class="footer-link">Careers</a>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="social-icons">
+                        <a href="#" class="icon fb" aria-label="Facebook"></a>
+                        <a href="#" class="icon ig" aria-label="Instagram"></a>
+                        <a href="#" class="icon tiktok" aria-label="TikTok"></a>
+                        <a href="#" class="icon twitter" aria-label="Twitter"></a>
+                        <a href="#" class="icon linkedin" aria-label="LinkedIn"></a>
+                    </div>
+                </div>
             </div>
-        </div>
 
-        <hr>
+            <hr>
 
-        <div class="footer-bottom">
-            <div class="footer-links">
-                <a href="#">Terms & Conditions</a>
-                <a href="#">Privacy Policy</a>
-                <a href="#">Web Accessibility</a>
-                <span>&copy; 2024 WellWomen</span>
+            <div class="footer-bottom">
+                <div class="footer-links d-flex justify-content-between">
+                    <a href="#">Terms & Conditions</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Web Accessibility</a>
+                </div>
+                <div class="text-center mt-3">
+                    <span>&copy; 2024 WellWomen</span>
+                </div>
             </div>
         </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
