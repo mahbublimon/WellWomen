@@ -5,220 +5,166 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WellWoman</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMTzAp9xLWoFBjJ25nxW0ZqH2oEqM5F5V4n36lQ" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <!-- Navbar -->
-    <nav class="navbar">
-        <a href="home" class="logo">WellWoman</a>
-        <ul class="nav-links">
-            <li><a href="home">Home</a></li>
-            <li><a href="about">About</a></li>
-            <li class="dropdown">
-                <a href="#services" class="dropdown-toggle">Services</a>
-                <ul class="dropdown-menu">
-                    <li><a href="consultation">Consultation</a></li>
-                    <li><a href="fitness">Fitness Programs</a></li>
-                    <li><a href="nutrition">Nutrition Guidance</a></li>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="home">WellWoman</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about">About</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="consultation">Consultation</a></li>
+                            <li><a class="dropdown-item" href="fitness">Fitness Programs</a></li>
+                            <li><a class="dropdown-item" href="nutrition">Nutrition Guidance</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Resources
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="articles">Articles</a></li>
+                            <li><a class="dropdown-item" href="videos">Videos</a></li>
+                            <li><a class="dropdown-item" href="guides">Guides</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="advice">Advice</a></li>
+                    <li class="nav-item"><a class="nav-link" href="faq">FAQ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="review">Review</a></li>
                 </ul>
-            </li>
-            <li class="dropdown">
-                <a href="#resources" class="dropdown-toggle">Resources</a>
-                <ul class="dropdown-menu">
-                    <li><a href="articles">Articles</a></li>
-                    <li><a href="videos">Videos</a></li>
-                    <li><a href="guides">Guides</a></li>
-                </ul>
-            </li>
-            <li><a href="advice">Advice</a></li>
-            <li><a href="faq">FAQ</a></li>
-            <li><a href="review">Review</a></li>
-        </ul>
-        <a href="login" class="login">Login</a>
-        <div class="toggle-button">
-            <span></span>
-            <span></span>
-            <span></span>
+                <a href="login" class="btn btn-outline-primary ms-2">Login</a>
+            </div>
         </div>
     </nav>
 
     <!-- Fitness Program Section -->
-    <section class="fitness-program">
-        <h2>Fitness Programs for Women</h2>
-        <p>Choose from a variety of fitness programs designed to meet your unique needs.</p>
+    <section class="container my-5">
+        <h2 class="text-center">Fitness Programs for Women</h2>
+        <p class="text-center mb-5">Choose from a variety of fitness programs designed to meet your unique needs.</p>
 
-        <!-- Block 1 -->
-        <div class="fitness-block">
+        <!-- Block 1: Strength & Conditioning -->
+        <div class="fitness-block mb-5">
             <h3>Strength & Conditioning</h3>
-            <div class="fitness-cards">
+            <div class="row row-cols-1 row-cols-md-3 g-4">
                 <!-- Card 1 -->
-                <div class="fitness-card">
-                    <img src="./images/strength1.jpg" alt="Strength & Conditioning Image">
-                    <h4>Beginner Strength</h4>
-                    <p>Designed for women starting their fitness journey, focusing on building strength.</p>
-                    <button class="details-btn" onclick="showDetails('strength1')">Details</button>
-                    <div class="details" id="strength1">
-                        <p>Program for beginner-level strength training, focusing on improving muscle tone and overall
-                            strength.</p>
+                <div class="col">
+                    <div class="card">
+                        <img src="./images/strength1.jpg" class="card-img-top" alt="Strength & Conditioning Image">
+                        <div class="card-body">
+                            <h5 class="card-title">Beginner Strength</h5>
+                            <p class="card-text">Designed for women starting their fitness journey, focusing on building strength.</p>
+                            <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#strength1">Details</button>
+                            <div class="collapse" id="strength1">
+                                <p class="mt-2">Program for beginner-level strength training, focusing on improving muscle tone and overall strength.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <!-- Card 2 -->
-                <div class="fitness-card">
-                    <img src="./images/strength2.jpg" alt="Strength & Conditioning Image">
-                    <h4>Advanced Strength</h4>
-                    <p>A program for women with prior experience looking to intensify their strength training.</p>
-                    <button class="details-btn" onclick="showDetails('strength2')">Details</button>
-                    <div class="details" id="strength2">
-                        <p>Advanced strength program designed for women who want to push their limits and build muscle
-                            mass.</p>
+                <div class="col">
+                    <div class="card">
+                        <img src="./images/strength2.jpg" class="card-img-top" alt="Strength & Conditioning Image">
+                        <div class="card-body">
+                            <h5 class="card-title">Advanced Strength</h5>
+                            <p class="card-text">A program for women with prior experience looking to intensify their strength training.</p>
+                            <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#strength2">Details</button>
+                            <div class="collapse" id="strength2">
+                                <p class="mt-2">Advanced strength program designed for women who want to push their limits and build muscle mass.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <!-- Card 3 -->
-                <div class="fitness-card">
-                    <img src="./images/strength3.jpg" alt="Strength & Conditioning Image">
-                    <h4>Core Strength</h4>
-                    <p>A targeted program to help strengthen your core and improve posture.</p>
-                    <button class="details-btn" onclick="showDetails('strength3')">Details</button>
-                    <div class="details" id="strength3">
-                        <p>Focusing on exercises that build a solid core, improving balance and flexibility.</p>
+                <div class="col">
+                    <div class="card">
+                        <img src="./images/strength3.jpg" class="card-img-top" alt="Strength & Conditioning Image">
+                        <div class="card-body">
+                            <h5 class="card-title">Core Strength</h5>
+                            <p class="card-text">A targeted program to help strengthen your core and improve posture.</p>
+                            <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#strength3">Details</button>
+                            <div class="collapse" id="strength3">
+                                <p class="mt-2">Focusing on exercises that build a solid core, improving balance and flexibility.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Block 2 -->
-        <div class="fitness-block">
+        <!-- Block 2: Cardio & Endurance -->
+        <div class="fitness-block mb-5">
             <h3>Cardio & Endurance</h3>
-            <div class="fitness-cards">
+            <div class="row row-cols-1 row-cols-md-3 g-4">
                 <!-- Card 1 -->
-                <div class="fitness-card">
-                    <img src="./images/cardio1.jpg" alt="Cardio & Endurance Image">
-                    <h4>Beginner Cardio</h4>
-                    <p>Perfect for women new to cardio workouts, focusing on stamina and heart health.</p>
-                    <button class="details-btn" onclick="showDetails('cardio1')">Details</button>
-                    <div class="details" id="cardio1">
-                        <p>This program focuses on building endurance and stamina with moderate-intensity cardio
-                            exercises.</p>
+                <div class="col">
+                    <div class="card">
+                        <img src="./images/cardio1.jpg" class="card-img-top" alt="Cardio & Endurance Image">
+                        <div class="card-body">
+                            <h5 class="card-title">Beginner Cardio</h5>
+                            <p class="card-text">Perfect for women new to cardio workouts, focusing on stamina and heart health.</p>
+                            <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#cardio1">Details</button>
+                            <div class="collapse" id="cardio1">
+                                <p class="mt-2">This program focuses on building endurance and stamina with moderate-intensity cardio exercises.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <!-- Card 2 -->
-                <div class="fitness-card">
-                    <img src="./images/cardio2.jpg" alt="Cardio & Endurance Image">
-                    <h4>HIIT Cardio</h4>
-                    <p>A high-intensity interval training program that boosts fat burn and stamina.</p>
-                    <button class="details-btn" onclick="showDetails('cardio2')">Details</button>
-                    <div class="details" id="cardio2">
-                        <p>Intense bursts of cardio exercises followed by rest periods to maximize calorie burn.</p>
+                <div class="col">
+                    <div class="card">
+                        <img src="./images/cardio2.jpg" class="card-img-top" alt="Cardio & Endurance Image">
+                        <div class="card-body">
+                            <h5 class="card-title">HIIT Cardio</h5>
+                            <p class="card-text">A high-intensity interval training program that boosts fat burn and stamina.</p>
+                            <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#cardio2">Details</button>
+                            <div class="collapse" id="cardio2">
+                                <p class="mt-2">Intense bursts of cardio exercises followed by rest periods to maximize calorie burn.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <!-- Card 3 -->
-                <div class="fitness-card">
-                    <img src="./images/cardio3.jpg" alt="Cardio & Endurance Image">
-                    <h4>Long-Distance Running</h4>
-                    <p>A program designed for women preparing for long-distance events or wanting to increase stamina.
-                    </p>
-                    <button class="details-btn" onclick="showDetails('cardio3')">Details</button>
-                    <div class="details" id="cardio3">
-                        <p>Long-duration running program to increase stamina and endurance over time, suitable for
-                            marathon training.</p>
+                <div class="col">
+                    <div class="card">
+                        <img src="./images/cardio3.jpg" class="card-img-top" alt="Cardio & Endurance Image">
+                        <div class="card-body">
+                            <h5 class="card-title">Long-Distance Running</h5>
+                            <p class="card-text">A program designed for women preparing for long-distance events or wanting to increase stamina.</p>
+                            <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#cardio3">Details</button>
+                            <div class="collapse" id="cardio3">
+                                <p class="mt-2">Long-duration running program to increase stamina and endurance over time, suitable for marathon training.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Block 3 -->
-        <div class="fitness-block">
-            <h3>Yoga & Flexibility</h3>
-            <div class="fitness-cards">
-                <!-- Card 1 -->
-                <div class="fitness-card">
-                    <img src="./images/yoga1.jpg" alt="Yoga & Flexibility Image">
-                    <h4>Beginner Yoga</h4>
-                    <p>Ideal for women new to yoga, focusing on flexibility and mindfulness.</p>
-                    <button class="details-btn" onclick="showDetails('yoga1')">Details</button>
-                    <div class="details" id="yoga1">
-                        <p>Gentle yoga sessions to help improve flexibility, mindfulness, and stress relief.</p>
-                    </div>
-                </div>
-                <!-- Card 2 -->
-                <div class="fitness-card">
-                    <img src="./images/yoga2.jpg" alt="Yoga & Flexibility Image">
-                    <h4>Power Yoga</h4>
-                    <p>An energetic yoga practice that focuses on strength, flexibility, and balance.</p>
-                    <button class="details-btn" onclick="showDetails('yoga2')">Details</button>
-                    <div class="details" id="yoga2">
-                        <p>A fast-paced, dynamic yoga style that blends strength and flexibility exercises for an
-                            invigorating workout.</p>
-                    </div>
-                </div>
-                <!-- Card 3 -->
-                <div class="fitness-card">
-                    <img src="./images/yoga3.jpg" alt="Yoga & Flexibility Image">
-                    <h4>Restorative Yoga</h4>
-                    <p>A slower-paced yoga practice focused on relaxation and deep stretching.</p>
-                    <button class="details-btn" onclick="showDetails('yoga3')">Details</button>
-                    <div class="details" id="yoga3">
-                        <p>Relaxing and restorative yoga poses, helping to reduce stress and improve flexibility.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Block 4 -->
-        <div class="fitness-block">
-            <h3>Weight Loss Programs</h3>
-            <div class="fitness-cards">
-                <!-- Card 1 -->
-                <div class="fitness-card">
-                    <img src="./images/weightloss1.jpg" alt="Weight Loss Image">
-                    <h4>Weight Loss 101</h4>
-                    <p>Perfect for women who want to kickstart their weight loss journey with easy-to-follow steps.</p>
-                    <button class="details-btn" onclick="showDetails('weightloss1')">Details</button>
-                    <div class="details" id="weightloss1">
-                        <p>A basic program combining diet and exercise to promote healthy weight loss and fat burning.
-                        </p>
-                    </div>
-                </div>
-                <!-- Card 2 -->
-                <div class="fitness-card">
-                    <img src="./images/weightloss2.jpg" alt="Weight Loss Image">
-                    <h4>Advanced Weight Loss</h4>
-                    <p>A more intensive weight loss program with advanced workout techniques and a tailored nutrition
-                        plan.</p>
-                    <button class="details-btn" onclick="showDetails('weightloss2')">Details</button>
-                    <div class="details" id="weightloss2">
-                        <p>High-intensity interval training and a strict diet plan to accelerate fat loss and improve
-                            body composition.</p>
-                    </div>
-                </div>
-                <!-- Card 3 -->
-                <div class="fitness-card">
-                    <img src="./images/weightloss3.jpg" alt="Weight Loss Image">
-                    <h4>Postpartum Weight Loss</h4>
-                    <p>Designed for new mothers who want to safely lose weight and regain fitness post-pregnancy.</p>
-                    <button class="details-btn" onclick="showDetails('weightloss3')">Details</button>
-                    <div class="details" id="weightloss3">
-                        <p>A gentle, postpartum-friendly program for new moms focusing on regaining strength and
-                            reducing baby weight.</p>
-                    </div>
-                </div>
-            </div>
+        <!-- Call to Action -->
+        <div class="text-center">
+            <p>Ready to get started?</p>
+            <a href="consultation.html" class="btn btn-primary">Book a Consultation</a>
         </div>
     </section>
 
-    <script>
-        // JavaScript to toggle details display
-        function showDetails(id) {
-            var details = document.getElementById(id);
-            if (details.style.display === "block") {
-                details.style.display = "none";
-            } else {
-                details.style.display = "block";
-            }
-        }
-    </script>
-
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9gyb4C5O1vSKZqz4Kag6E9RfO18c6B9Sgq4Q1Qk6pzT1+VvVYx00" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-pzjw8f+ua7Kw1TIq0A4DXYJ6+6qAxzXYJzAwhhAB5Qy7rDZc/2z2YtH4NkgQOmlB" crossorigin="anonymous"></script>
 </body>
 
 </html>

@@ -5,81 +5,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Implantation Calculator</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <script defer src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <!-- Navbar -->
-    <nav class="navbar">
-        <a href="home.html" class="logo">WellWoman</a>
-        <ul class="nav-links">
-            <li><a href="home.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li class="dropdown">
-                <a href="#services" class="dropdown-toggle">Services</a>
-                <ul class="dropdown-menu">
-                    <li><a href="consultation.html">Consultation</a></li>
-                    <li><a href="fitness.html">Fitness Programs</a></li>
-                    <li><a href="nutrition.html">Nutrition Guidance</a></li>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a href="home.html" class="navbar-brand">WellWoman</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a href="home.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-item dropdown">
+                        <a href="#services" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="consultation.html" class="dropdown-item">Consultation</a></li>
+                            <li><a href="fitness.html" class="dropdown-item">Fitness Programs</a></li>
+                            <li><a href="nutrition.html" class="dropdown-item">Nutrition Guidance</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="calculators.html" class="nav-link">Calculators</a></li>
+                    <li class="nav-item"><a href="advice.html" class="nav-link">Advice</a></li>
+                    <li class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></li>
+                    <li class="nav-item"><a href="review.html" class="nav-link">Review</a></li>
+                    <li class="nav-item"><a href="subscription.html" class="nav-link">Manage Subscription</a></li>
                 </ul>
-            </li>
-            <li><a href="calculators.html">Calculators</a></li>
-            <li><a href="advice.html">Advice</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-            <li><a href="review.html">Review</a></li>
-            <li><a href="subscription.html">Manage Subscription</a></li>
-        </ul>
-        <a href="login.html" class="login">Login</a>
+                <a href="login.html" class="btn btn-outline-primary ms-2">Login</a>
+            </div>
+        </div>
     </nav>
 
     <!-- Calculator -->
-    <main class="calculator-main">
-        <h1>Implantation Calculator</h1>
-        <p>Estimate when implantation might occur based on ovulation date.</p>
-
-        <form>
-            <label for="ovulation-date">Ovulation Date:</label>
-            <input type="date" id="ovulation-date" required>
-            <button type="button" onclick="calculateImplantation()">Calculate</button>
-        </form>
-
-        <p id="result"></p>
+    <main class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <h1 class="text-center">Implantation Calculator</h1>
+                <p class="text-center">Estimate when implantation might occur based on ovulation date.</p>
+                <form class="needs-validation" novalidate>
+                    <div class="mb-3">
+                        <label for="ovulation-date" class="form-label">Ovulation Date:</label>
+                        <input type="date" class="form-control" id="ovulation-date" required>
+                        <div class="invalid-feedback">Please select an ovulation date.</div>
+                    </div>
+                    <button type="button" class="btn btn-primary w-100" onclick="calculateImplantation()">Calculate</button>
+                </form>
+                <p class="mt-4 text-center" id="result"></p>
+            </div>
+        </div>
     </main>
 
     <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <a href="home.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="services.html">Services</a>
-            <a href="resources.html">Resources</a>
-            <a href="advice.html">Advice</a>
-            <a href="faq.html">FAQ</a>
-            <a href="review.html">Review</a>
-            <a href="contact.html">Contact</a>
-            <a href="careers.html">Careers</a>
-
-            <div class="social-icons">
-                <a href="#" class="icon fb" aria-label="Facebook"></a>
-                <a href="#" class="icon ig" aria-label="Instagram"></a>
-                <a href="#" class="icon tiktok" aria-label="TikTok"></a>
-                <a href="#" class="icon twitter" aria-label="Twitter"></a>
-                <a href="#" class="icon linkedin" aria-label="LinkedIn"></a>
+    <footer class="bg-light py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <ul class="nav flex-column">
+                        <li class="nav-item"><a href="home.html" class="nav-link p-0">Home</a></li>
+                        <li class="nav-item"><a href="about.html" class="nav-link p-0">About</a></li>
+                        <li class="nav-item"><a href="services.html" class="nav-link p-0">Services</a></li>
+                        <li class="nav-item"><a href="resources.html" class="nav-link p-0">Resources</a></li>
+                        <li class="nav-item"><a href="advice.html" class="nav-link p-0">Advice</a></li>
+                        <li class="nav-item"><a href="faq.html" class="nav-link p-0">FAQ</a></li>
+                        <li class="nav-item"><a href="review.html" class="nav-link p-0">Review</a></li>
+                        <li class="nav-item"><a href="contact.html" class="nav-link p-0">Contact</a></li>
+                        <li class="nav-item"><a href="careers.html" class="nav-link p-0">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 d-flex justify-content-end">
+                    <a href="#" class="me-2" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="me-2" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                    <a href="#" class="me-2" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+                    <a href="#" class="me-2" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                </div>
             </div>
-        </div>
-
-        <hr>
-
-        <div class="footer-bottom">
-            <div class="footer-links">
-                <a href="#">Terms & Conditions</a>
-                <a href="#">Privacy Policy</a>
-                <a href="#">Web Accessibility</a>
-                <span>&copy; 2024 WellWomen</span>
+            <hr>
+            <div class="text-center">
+                <a href="#" class="text-decoration-none me-3">Terms & Conditions</a>
+                <a href="#" class="text-decoration-none me-3">Privacy Policy</a>
+                <a href="#" class="text-decoration-none">Web Accessibility</a>
+                <p class="mt-2">&copy; 2024 WellWomen</p>
             </div>
         </div>
     </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 </body>
 
 </html>

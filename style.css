@@ -51,7 +51,7 @@ body {
     display: block;
 }
 
-/* Hide the dropdown menu by default */
+/* Dropdown Menu */
 .dropdown-menu {
     display: none;
     position: absolute;
@@ -63,12 +63,10 @@ body {
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Show the dropdown menu when hovering over the parent dropdown */
 .dropdown:hover .dropdown-menu {
     display: block;
 }
 
-/* Styling for the links in the dropdown */
 .dropdown-menu li a {
     padding: 10px 20px;
     color: #1a1a1a;
@@ -77,9 +75,8 @@ body {
     transition: background-color 0.3s ease;
 }
 
-/* Change background on hover */
 .dropdown-menu li a:hover {
-    background-color:transparent;
+    background-color: transparent;
 }
 
 .login {
@@ -95,7 +92,7 @@ body {
     background-color: #ff5722;
 }
 
-/* First Block: Banner with CTA (Home Page) */
+/* Banner Section */
 .first-block {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -104,37 +101,32 @@ body {
     background-color: #f5f5f5;
 }
 
-/* Left Block */
 .left-block {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start; /* aligns content to the start (left) */
-    padding: 20px; /* Optional padding for spacing within the block */
+    align-items: flex-start;
+    padding: 20px;
 }
 
-/* Heading (h2) Styling */
 .left-block h2 {
     color: #34584a;
-    font-size: 2.2em; /* Slightly larger for visual hierarchy */
+    font-size: 2.2em;
     margin-bottom: 10px;
-    line-height: 1.3; /* Improved readability */
+    line-height: 1.3;
 }
 
-/* Paragraph Styling */
 .left-block p {
     font-size: 1.1em;
     color: #666;
     margin-bottom: 15px;
-    max-width: 80%; /* Constrain text width for better readability */
+    max-width: 80%;
 }
 
-/* CTA Button Styling */
 .cta-button {
     background-color: #ff7a59;
     color: #fff;
     padding: 12px 24px;
-    text-decoration: none;
     border-radius: 5px;
     display: inline-block;
     font-weight: bold;
@@ -147,32 +139,11 @@ body {
     background-color: #ff5722;
 }
 
-/* Right Block Image Styling */
-.right-block .top-image img {
-    width: 100%;
-    border-radius: 8px;
-    object-fit: cover;
-}
-
-.features {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
-}
-
-.feature {
-    text-align: center;
-}
-
-.feature img {
-    width: 100px;
-    height: 100px;
-    border-radius: 0%;
-}
-
-.feature p {
-    font-size: 0.9em;
-    margin-top: 5px;
+/* Responsive Banner */
+@media (max-width: 768px) {
+    .first-block {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* Calculator Section */
@@ -230,76 +201,7 @@ body {
     border-color: #34584a;
 }
 
-/* Calculator Styles */
-.calculator-main {
-    max-width: 600px;
-    margin: 50px auto;
-    text-align: center;
-    padding: 20px;
-    background: #f4f4f9;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.calculator-main h1 {
-    margin-bottom: 20px;
-    color: #333;
-}
-
-.calculator-main p {
-    margin-bottom: 20px;
-    color: #555;
-}
-
-.calculator-main form label {
-    display: block;
-    margin-bottom: 10px;
-    color: #333;
-    font-size: 1em;
-}
-
-.calculator-main form input,
-.calculator-main form button {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 1em;
-}
-
-.calculator-main form button {
-    background-color: #34584a;
-    color: white;
-    cursor: pointer;
-}
-
-.calculator-main form button:hover {
-    background-color: #ff7a59;
-}
-
-.calculator-main #result {
-    margin-top: 20px;
-    font-weight: bold;
-    color: #34584a;
-}
-
-/* Embryo Type Dropdown Specific Styles */
-select#embryo-type {
-    background-color: #ffffff;
-    border-color: #ddd;
-    padding: 12px;
-    font-size: 1em;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-bottom: 20px;
-}
-
-select#embryo-type option {
-    padding: 10px;
-}
-
-/* FAQ Section Styles */
+/* FAQ Section */
 .faq {
     max-width: 1080px;
     margin: 20px auto;
@@ -317,7 +219,7 @@ select#embryo-type option {
 }
 
 .answer {
-    display: none; /* Hide answers by default */
+    display: none;
     padding: 10px;
     background-color: transparent;
     border: 1px transparent;
@@ -326,7 +228,7 @@ select#embryo-type option {
     font-size: 1em;
 }
 
-/* Problem-Solution Section (Shared between Home and About) */
+/* Problem-Solution Section */
 .problem-solution {
     padding: 40px;
     background-color: #f5f7f5;
@@ -355,8 +257,6 @@ select#embryo-type option {
     width: 100%;
     border-radius: 8px;
 }
-
-/* About Page - Specific Sections */
 
 /* About Us Section */
 .about-us {
@@ -403,40 +303,7 @@ select#embryo-type option {
     color: #ff7a59;
 }
 
-/* Reviews Section */
-.reviews {
-    padding: 40px;
-    text-align: center;
-}
-
-.review-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    align-items: center;
-}
-
-.review-left img {
-    width: 100%;
-    border-radius: 8px;
-}
-
-.review-text {
-    text-align: left;
-}
-
-.review-text h3 {
-    color: #34584a;
-    font-size: 1.5em;
-}
-
-.review-scroll p {
-    font-style: italic;
-    color: #555;
-    margin: 10px 0;
-}
-
-/* Our Team Section */
+/* Team Section */
 .our-team {
     padding: 40px;
     text-align: center;
@@ -480,7 +347,18 @@ select#embryo-type option {
     background-color: #ff5722;
 }
 
-/* Feature Comparison Table (Home Page) */
+/* Responsive Styling for Team */
+@media (max-width: 768px) {
+    .team-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    .team-card {
+        width: 80%;
+    }
+}
+
+/* Feature Comparison Table */
 .feature-comparison {
     padding: 40px;
     background-color: #ffffff;
@@ -496,547 +374,22 @@ select#embryo-type option {
 .feature-comparison table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
-}
-
-.feature-comparison table, .feature-comparison th, .feature-comparison td {
-    border: 1px solid #ddd;
+    text-align: center;
 }
 
 .feature-comparison th, .feature-comparison td {
-    padding: 10px;
-    text-align: center;
-}
-
-.feature-comparison th {
-    background-color: #34584a;
-    color: #fff;
-}
-
-/* FAQ Section (Home Page) */
-.faq {
-    padding: 40px;
-    background-color: #f5f7f5;
-}
-
-.faq h3 {
-    font-size: 1.5em;
-    color: #34584a;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.question {
-    font-weight: bold;
-    padding: 10px;
-    cursor: pointer;
-    background-color: #eaeaea;
-    margin: 10px 0;
-    border-radius: 5px;
-}
-
-.answer {
-    display: none;
-    padding: 10px;
-    background-color: #fff;
-    border-radius: 5px;
+    padding: 15px;
     border: 1px solid #ddd;
 }
 
-/* Consultation Section */
-.consultation {
-    padding: 40px;
-    text-align: center;
-}
-
-.consultation h2 {
-    font-size: 2em;
-    color: #34584a;
-    margin-bottom: 10px;
-}
-
-.consultation p {
+.feature-comparison th {
+    background-color: #f5f5f5;
     font-size: 1.1em;
-    color: #555;
-    margin-bottom: 30px;
 }
 
-.consultant-cards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-}
-
-.consultant-card {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    padding: 20px;
-    text-align: center;
-}
-
-.consultant-card img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-bottom: 15px;
-}
-
-.consultant-card h4 {
-    color: #ff7a59;
-    font-size: 1.2em;
-    margin: 10px 0;
-}
-
-.consultant-card p {
-    font-size: 0.95em;
-    color: #666;
-}
-
-.btn {
-    display: inline-block;
-    padding: 8px 15px;
-    margin: 10px 5px 0;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.chamber-btn {
-    background-color: #34584a;
-    color: #fff;
-}
-
-.chamber-btn:hover {
-    background-color: #ff7a59;
-}
-
-.contact-btn {
-    background-color: #ff7a59;
-    color: #fff;
-}
-
-.contact-btn:hover {
-    background-color: #ff5722;
-}
-
-/* Fitness Program Section */
-.fitness-program {
-    padding: 40px;
-    text-align: center;
-}
-
-.fitness-program h2 {
-    font-size: 2em;
-    color: #34584a;
-    margin-bottom: 10px;
-}
-
-.fitness-program p {
-    font-size: 1.1em;
-    color: #555;
-    margin-bottom: 30px;
-}
-
-.fitness-block {
-    margin-bottom: 50px;
-}
-
-.fitness-cards {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-}
-
-.fitness-card {
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 250px;
-    padding: 20px;
-    text-align: center;
-    position: relative;
-}
-
-.fitness-card img {
-    width: 100%;
-    height: 150px;
-    border-radius: 8px;
-    margin-bottom: 15px;
-}
-
-.fitness-card h4 {
-    color: #ff7a59;
-    font-size: 1.2em;
-    margin: 10px 0;
-}
-
-.fitness-card p {
-    font-size: 0.95em;
-    color: #666;
-}
-
-.details-btn {
-    background-color: #34584a;
-    color: #fff;
-    padding: 8px 12px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 10px;
-}
-
-.details-btn:hover {
-    background-color: #ff7a59;
-}
-
-.details {
-    display: none;
-    margin-top: 10px;
-    color: #444;
-    font-size: 0.9em;
-}
-
-/* Nutrition Page Styling */
-.nutrition-page {
-    width: 80%;
-    margin: 0 auto;
-    padding: 20px;
-    max-width: 900px;
-}
-
-.nutrition-block {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    margin: 20px 0;
-    overflow: hidden;
-}
-
-.block-image {
-    width: 100%;
-    max-height: 300px;
-    object-fit: cover;
-}
-
-.content {
-    padding: 20px;
-    text-align: center;
-}
-
-h2 {
-    font-size: 1.8em;
-    color: #34584a;
-    margin: 10px 0;
-}
-
-p {
-    font-size: 1em;
-    color: #666666;
-    line-height: 1.6;
-}
-
-/* Articles Grid Styling */
-.articles-section {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-.articles-section h2 {
-    font-size: 2em;
-    color: #34584a;
-    text-align: center;
-    margin-bottom: 20px;
-}
-.articles-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
-
-.article {
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    transition: transform 0.3s;
-}
-
-.article:hover {
-    transform: scale(1.03);
-}
-
-.article-image {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-}
-
-.article-content {
-    padding: 15px;
-    text-align: left;
-}
-
-.article-content h3 {
-    font-size: 1.4em;
-    color: #34584a;
-    margin-bottom: 10px;
-}
-
-.article-content p {
-    font-size: 0.95em;
-    color: #666666;
-    line-height: 1.5;
-}
-
-.read-more {
-    font-size: 0.9em;
-    color: #ff7a59;
-    text-decoration: none;
-    display: inline-block;
-    margin-top: 10px;
-}
-
-.read-more:hover {
-    text-decoration: underline;
-}
-
-/* Responsive Styling */
-@media (max-width: 992px) {
-    .articles-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 600px) {
-    .articles-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .article-image {
-        height: 200px;
-    }
-}
-
-/* Guides Grid Styling */
-.guides-section {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-.guides-section h2 {
-    font-size: 2em;
-    color: #34584a;
-    text-align: center;
-    margin-bottom: 20px;
-}
-.guides-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-}
-
-.guide-card {
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.3s;
-}
-
-.guide-card:hover {
-    transform: scale(1.03);
-}
-
-.guide-image {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-}
-
-.guide-content {
-    padding: 15px;
-    text-align: left;
-}
-
-.guide-content h3 {
-    font-size: 1.4em;
-    color: #34584a;
-    margin-bottom: 10px;
-}
-
-.guide-content p {
-    font-size: 0.95em;
-    color: #666666;
-    line-height: 1.5;
-}
-
-.read-more {
-    font-size: 0.9em;
-    color: #ff7a59;
-    text-decoration: none;
-    display: inline-block;
-    margin-top: 10px;
-}
-
-.read-more:hover {
-    text-decoration: underline;
-}
-
-/* Responsive Styling */
-@media (max-width: 992px) {
-    .guides-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .guide-image {
-        height: 200px;
-    }
-}
-
-/* Advice Grid Layout */
-.advice-section {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 20px;
-    text-align: center;
-}
-
-.advice-section h2 {
-    font-size: 2.5em;
-    color: #34584a;
-    margin-bottom: 10px;
-}
-
-.advice-intro {
-    font-size: 1.2em;
-    color: #666;
-    margin-bottom: 30px;
-}
-.advice-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-}
-
-.advice-card {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    text-align: left;
-    transition: transform 0.3s;
-}
-
-.advice-card:hover {
-    transform: scale(1.05);
-}
-
-.advice-icon {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-}
-
-.advice-content {
-    padding: 15px;
-}
-
-.advice-content h3 {
-    font-size: 1.6em;
-    color: #34584a;
-    margin: 10px 0;
-}
-
-.advice-content p {
-    font-size: 1em;
-    color: #666;
-    line-height: 1.5;
-}
-
-.learn-more {
-    font-size: 0.95em;
-    color: #ff7a59;
-    text-decoration: none;
-    display: inline-block;
-    margin-top: 10px;
-}
-
-.learn-more:hover {
-    text-decoration: underline;
-}
-
-/* FAQ Layout */
-.faq-section {
-    width: 80%;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 40px 20px;
-    text-align: center;
-}
-
-.faq-section h2 {
-    font-size: 2.5em;
-    color: #34584a;
-    margin-bottom: 20px;
-}
-
-.faq-container {
-    text-align: left;
-    margin-top: 20px;
-}
-
-.faq-item {
-    margin: 10px 0;
-    border-bottom: 1px solid #ddd;
-    padding: 10px 0;
-}
-
-.question {
-    font-size: 1.2em;
-    color: #34584a;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-.answer {
-    display: none;
+.feature-comparison td {
     font-size: 1em;
     color: #555;
-    margin-top: 5px;
-}
-
-/* Call-to-Action Styling */
-.cta {
-    margin-top: 40px;
-    font-size: 1.2em;
-    color: #34584a;
-}
-
-.cta-button {
-    background-color: #34584a;
-    color: #fff;
-    padding: 12px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 1.1em;
-    margin-top: 10px;
-    display: inline-block;
-}
-
-.cta-button:hover {
-    background-color: #ff7a59;
 }
 
 /* Contact Section */
@@ -1074,14 +427,17 @@ p {
     color: #34584a;
 }
 
-.contact-form input, .contact-form select, .contact-form textarea {
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
     padding: 10px;
     font-size: 1em;
     border-radius: 5px;
     border: 1px solid #ddd;
 }
 
-.contact-form select, .contact-form textarea {
+.contact-form select,
+.contact-form textarea {
     width: 100%;
 }
 
@@ -1123,7 +479,6 @@ p {
 }
 
 /* Careers Section */
-/* Careers Intro Section Styling */
 .careers {
     padding: 40px 20px;
     text-align: center;
@@ -1171,27 +526,16 @@ p {
     border-radius: 5px;
 }
 
-.dna-section, .perks-section {
-    padding: 40px 20px;
-    max-width: 1000px;
-    margin: auto;
-}
-
-h2 {
-    color: #34584a;
-    font-size: 2em;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
 /* Grid Card Layout for DNA and Perks */
-.dna-grid, .perks-grid {
+.dna-grid,
+.perks-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
 }
 
-.dna-card, .perk-card {
+.dna-card,
+.perk-card {
     padding: 20px;
     border-radius: 8px;
     background-color: #fff;
@@ -1257,6 +601,7 @@ h2 {
 .slider-btn.right {
     right: 0;
 }
+
 /* Open Positions Section Styling */
 .positions {
     padding: 40px 20px;
@@ -1312,174 +657,9 @@ h2 {
 }
 
 /* Subscription Section */
-/* Hero Section */
-.empower-her {
-    background-color: #ff7a59;
-    color: #fff;
-    text-align: center;
-    padding: 80px 20px;
-}
-
-.hero-content h1 {
-    font-size: 3.5em;
-    margin-bottom: 20px;
-}
-
-.hero-content p {
-    font-size: 1.2em;
-    margin-bottom: 20px;
-}
-
-.cta-button {
-    background-color: #fff;
-    color: #34584a;
-    padding: 15px 30px;
-    border-radius: 5px;
-    font-size: 1.1em;
-    text-decoration: none;
-}
-
-.cta-button:hover {
-    background-color: #ff5722;
-    color: #fff;
-}
-
-/* Achievements Section */
-.achievements {
-    background-color: #fff;
-    padding: 50px 20px;
-    text-align: center;
-}
-
-.stats {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 30px;
-}
-
-.stat {
-    text-align: center;
-    max-width: 300px;
-}
-
-.stat h3 {
-    font-size: 2.5em;
-    color: #34584a;
-}
-
-.stat p {
-    font-size: 1.1em;
-    color: #666;
-}
-
-/* Why Choose WellWoman Premium Section */
-.why-choose {
-    background-color: #fff;
-    padding: 50px 20px;
-    text-align: center;
-}
-
-.why-choose h2 {
-    font-size: 2.5em;
-    color: #34584a;
-    margin-bottom: 20px;
-}
-
-.why-choose ul {
-    list-style-type: none;
-    margin-top: 30px;
-}
-
-.why-choose li {
-    font-size: 1.2em;
-    margin-bottom: 15px;
-}
-
-/* Testimonials Section */
-.testimonials {
-    background-color: #f5f5f5;
-    padding: 50px 20px;
-    text-align: center;
-}
-
-.testimonials blockquote {
-    font-size: 1.2em;
-    font-style: italic;
-    color: #34584a;
-    border-left: 5px solid #ff7a59;
-    padding-left: 15px;
-    margin: 20px auto;
-    max-width: 600px;
-}
-
-/* How It Works Section */
-.how-it-works {
-    background-color: #fff;
-    padding: 50px 20px;
-    text-align: center;
-}
-
-.how-it-works h2 {
-    font-size: 2.5em;
-    color: #34584a;
-    margin-bottom: 20px;
-}
-
-.how-it-works ul {
-    list-style-type: none;
-    margin-top: 30px;
-}
-
-.how-it-works li {
-    font-size: 1.2em;
-    margin-bottom: 15px;
-}
-
-/* Impact Section */
-.impact {
-    background-color: #ff7a59;
-    color: #fff;
-    padding: 50px 20px;
-    text-align: center;
-}
-
-.impact-stats {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 30px;
-}
-
-.impact-stat {
-    text-align: center;
-    max-width: 300px;
-}
-
-.impact-stat h3 {
-    font-size: 2.5em;
-    color: #fff;
-}
-
-.impact-stat p {
-    font-size: 1.1em;
-    color: #fff;
-}
-
 .subscription-plans {
-    text-align: center;
-    padding: 50px;
+    padding: 50px 20px;
     background-color: #f9f9f9;
-}
-
-.pricing-toggle {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 30px;
-}
-
-.pricing-toggle span {
-    font-size: 18px;
-    margin: 0 10px;
 }
 
 .switch {
@@ -1525,6 +705,7 @@ input:checked + .slider:before {
     transform: translateX(30px);
 }
 
+/* Plan Layout */
 .plans {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -1538,8 +719,8 @@ input:checked + .slider:before {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Ensure content is evenly spaced */
-    height: 100%; /* Make all boxes equal height */
+    justify-content: space-between;
+    height: 100%;
     text-align: left;
 }
 
@@ -1565,7 +746,7 @@ input:checked + .slider:before {
 }
 
 .plan .cta-button {
-    margin-top: auto; /* Push the button to the bottom of the container */
+    margin-top: auto;
     padding: 10px 20px;
     background-color: #4CAF50;
     color: white;
@@ -1573,39 +754,20 @@ input:checked + .slider:before {
     text-decoration: none;
     border-radius: 5px;
     font-size: 16px;
-    align-self: center; /* Center the button horizontally */
+    align-self: center;
 }
 
 .plan .cta-button:hover {
     background-color: #45a049;
 }
 
-/* Future Vision Section */
-.future-vision {
-    background-color: #ff7a59;
-    color: #fff;
-    padding: 50px 20px;
-    text-align: center;
-}
-
-.future-vision h2 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-}
-
-.future-vision p {
-    font-size: 1.2em;
-    margin-bottom: 30px;
-}
-
 /* Layout for Login Section */
 .login-container {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Two columns layout */
+    grid-template-columns: 1fr 1fr;
     justify-items: center;
     align-items: center;
     padding: 20px;
-    flex: 1; /* Make this section flexible to fit available space */
 }
 
 .left-column {
@@ -1653,6 +815,7 @@ input:checked + .slider:before {
     margin: 10px 0 5px;
 }
 
+/* General Input Styles */
 .login-box input[type="email"],
 .login-box input[type="password"] {
     width: 100%;
@@ -1826,17 +989,6 @@ input:checked + .slider:before {
     margin: 10px 0 5px;
 }
 
-.login-box input[type="email"],
-.login-box input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 1em;
-    background: rgba(255, 255, 255, 0.9);
-}
-
 .forgot-password {
     font-size: 0.85em;
     color: #ff7a59;
@@ -1904,109 +1056,6 @@ input:checked + .slider:before {
     background-size: cover;
     border-radius: 50%;
     transition: opacity 0.2s ease;
-}
-
-/* Signup Container */
-.signup-container {
-    display: flex;
-    height: calc(100vh - 60px);
-    background: #f4f4f9;
-}
-
-/* Signup Box */
-.signup-box {
-    max-width: 400px;
-    width: 100%;
-    padding: 2rem;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.signup-box h2 {
-    margin-bottom: 1rem;
-    color: #333;
-    text-align: center;
-}
-
-.signup-box label {
-    display: block;
-    margin-top: 1rem;
-    color: #555;
-    font-size: 0.9rem;
-}
-
-.signup-box input[type="text"], 
-.signup-box input[type="email"], 
-.signup-box input[type="password"], 
-.signup-box input[type="file"] {
-    width: 100%;
-    padding: 0.8rem;
-    margin-top: 0.5rem;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-}
-
-.signup-box .sign-up-btn {
-    width: 100%;
-    padding: 0.8rem;
-    margin-top: 1.5rem;
-    background-color: #28a745;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background 0.3s;
-}
-
-.signup-box .sign-up-btn:hover {
-    background-color: #218838;
-}
-
-.signup-box .sign-in-text {
-    text-align: center;
-    margin-top: 1rem;
-    color: #555;
-}
-
-.signup-box .sign-in-text a {
-    color: #28a745;
-    text-decoration: none;
-}
-
-/* Divider */
-.divider {
-    text-align: center;
-    color: #888;
-    margin: 1.5rem 0;
-    font-size: 0.9rem;
-}
-
-/* Set specific icons for each platform */
-.social-icon.facebook {
-    background-image: url('path/to/facebook-icon.png');
-    background-color: #3b5998;
-}
-
-.social-icon.google {
-    background-image: url('path/to/google-icon.png');
-    background-color: #db4437;
-}
-
-.social-icon.apple {
-    background-image: url('path/to/apple-icon.png');
-    background-color: #333333;
-}
-
-.social-icon.microsoft {
-    background-image: url('path/to/microsoft-icon.png');
-    background-color: #f3ba04;
-}
-
-/* Hover effect for social icons */
-.social-icon:hover {
-    opacity: 0.8;
 }
 
 /* Signup Form Styles */
@@ -2111,24 +1160,7 @@ button:hover {
     background-color: #0056b3;
 }
 
-.cta-button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    width: 40%;
-}
-
-.cta-button:hover {
-    background-color: #45a049;
-}
-
-.social-signup {
-    margin-top: 20px;
-}
-
+/* Social Media Signup Buttons */
 .social-button {
     width: 100%;
     padding: 12px;
@@ -2138,18 +1170,8 @@ button:hover {
     cursor: pointer;
 }
 
-.social-button.facebook {
-    background-color: #3b5998;
-    color: white;
-}
-
 .social-button.google {
     background-color: #db4437;
-    color: white;
-}
-
-.social-button.apple {
-    background-color: #000000;
     color: white;
 }
 
@@ -2158,52 +1180,14 @@ button:hover {
     color: white;
 }
 
-/* Footer */
-footer {
-    background-color: #f8f8f8;
-    padding: 20px;
-    text-align: center;
+.social-button.apple {
+    background-color: #000000;
+    color: white;
 }
 
-footer .footer-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-footer .footer-content a {
-    color: #333;
-    margin: 0 15px;
-    text-decoration: none;
-}
-
-footer .footer-content .social-icons a {
-    margin: 0 10px;
-    display: inline-block;
-}
-
-footer .footer-content .social-icons a.icon {
-    width: 24px;
-    height: 24px;
-    background-size: cover;
-    display: block;
-}
-
-footer .footer-bottom {
-    text-align: center;
-    margin-top: 20px;
-}
-
-footer .footer-bottom a {
-    font-size: 14px;
-    color: #333;
-    margin: 0 10px;
-}
-
-footer .footer-bottom span {
-    font-size: 12px;
-    color: #777;
+.social-button.yahoo {
+    background-color: #400091;
+    color: white;
 }
 
 /* Footer */
@@ -2352,9 +1336,8 @@ hr {
     .footer-content, .footer-bottom {
         flex-direction: column;
         text-align: center;
-        
+    }
     .footer-links, .social-icons {
         margin-top: 10px;
     }
-}
 }

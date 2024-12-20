@@ -5,92 +5,99 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WellWoman</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"> <!-- If you have custom styles -->
 </head>
 
 <body>
     <!-- Navbar -->
-    <nav class="navbar">
-        <a href="home" class="logo">WellWoman</a>
-
-        <ul class="nav-links">
-            <li><a href="home">Home</a></li>
-            <li><a href="about">About</a></li>
-            <li class="dropdown">
-                <a href="#services" class="dropdown-toggle">Services</a>
-                <ul class="dropdown-menu">
-                    <li><a href="consultation">Consultation</a></li>
-                    <li><a href="fitness">Fitness Programs</a></li>
-                    <li><a href="nutrition">Nutrition Guidance</a></li>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="home">WellWoman</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about">About</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+                        <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                            <li><a class="dropdown-item" href="consultation">Consultation</a></li>
+                            <li><a class="dropdown-item" href="fitness">Fitness Programs</a></li>
+                            <li><a class="dropdown-item" href="nutrition">Nutrition Guidance</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="resourcesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Resources</a>
+                        <ul class="dropdown-menu" aria-labelledby="resourcesDropdown">
+                            <li><a class="dropdown-item" href="articles">Articles</a></li>
+                            <li><a class="dropdown-item" href="videos">Videos</a></li>
+                            <li><a class="dropdown-item" href="guides">Guides</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="advice">Advice</a></li>
+                    <li class="nav-item"><a class="nav-link" href="faq">FAQ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="review">Review</a></li>
                 </ul>
-            </li>
-            <li class="dropdown">
-                <a href="#resources" class="dropdown-toggle">Resources</a>
-                <ul class="dropdown-menu">
-                    <li><a href="articles">Articles</a></li>
-                    <li><a href="videos">Videos</a></li>
-                    <li><a href="guides">Guides</a></li>
-                </ul>
-            </li>
-            <li><a href="advice">Advice</a></li>
-            <li><a href="faq">FAQ</a></li>
-            <li><a href="review">Review</a></li>
-        </ul>
-
-        <a href="login" class="login">Login</a>
-
-        <div class="toggle-button">
-            <span></span>
-            <span></span>
-            <span></span>
+                <a href="login" class="btn btn-outline-primary ms-2">Login</a>
+            </div>
         </div>
     </nav>
+
     <!-- Contact Us Section -->
-    <section class="contact-section">
+    <section class="container my-5">
         <h2>Contact Us</h2>
-        <p>Use this form to reach out to our Customer Success Team regarding any questions, concerns, or feedback. You
-            can also view our FAQ for quick answers to commonly asked questions.</p>
+        <p>Use this form to reach out to our Customer Success Team regarding any questions, concerns, or feedback. You can also view our FAQ for quick answers to commonly asked questions.</p>
 
         <!-- Contact Type Selection -->
-        <form action="#" method="POST" class="contact-form">
-            <label for="contact-type">Type of contact:</label>
-            <select id="contact-type" name="contact-type">
-                <option value="support">I am a registered client and I need support.</option>
-                <option value="therapist-support">I am a current WellWoman healthcare professional and I need support.
-                </option>
-                <option value="therapist-application">I am a therapist interested in joining or a current applicant.
-                </option>
-                <option value="general-question">I have a question about the service.</option>
-                <option value="billing">I have a billing-related question.</option>
-                <option value="press">I have a press-related question.</option>
-                <option value="business-inquiry">I have a business-related inquiry.</option>
-                <option value="organization">I'm interested in WellWoman for my organization.</option>
-            </select>
+        <form action="#" method="POST">
+            <div class="mb-3">
+                <label for="contact-type" class="form-label">Type of contact:</label>
+                <select id="contact-type" name="contact-type" class="form-select">
+                    <option value="support">I am a registered client and I need support.</option>
+                    <option value="therapist-support">I am a current WellWoman healthcare professional and I need support.</option>
+                    <option value="therapist-application">I am a therapist interested in joining or a current applicant.</option>
+                    <option value="general-question">I have a question about the service.</option>
+                    <option value="billing">I have a billing-related question.</option>
+                    <option value="press">I have a press-related question.</option>
+                    <option value="business-inquiry">I have a business-related inquiry.</option>
+                    <option value="organization">I'm interested in WellWoman for my organization.</option>
+                </select>
+            </div>
 
             <!-- User Information -->
-            <label for="first-name">First Name</label>
-            <input type="text" id="first-name" name="first-name" required>
+            <div class="mb-3">
+                <label for="first-name" class="form-label">First Name</label>
+                <input type="text" id="first-name" name="first-name" class="form-control" required>
+            </div>
 
-            <label for="last-name">Last Name</label>
-            <input type="text" id="last-name" name="last-name" required>
+            <div class="mb-3">
+                <label for="last-name" class="form-label">Last Name</label>
+                <input type="text" id="last-name" name="last-name" class="form-control" required>
+            </div>
 
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" required>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email Address</label>
+                <input type="email" id="email" name="email" class="form-control" required>
+            </div>
 
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
+            <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea id="message" name="message" rows="4" class="form-control" required></textarea>
+            </div>
 
             <!-- Disclaimer -->
-            <p>By clicking “Submit” you agree to the processing of your personal information for the purpose of
-                responding to this inquiry. For more information about how we use and retain your information, please
-                see our <a href="#">Privacy Policy</a>.</p>
+            <p>By clicking “Submit” you agree to the processing of your personal information for the purpose of responding to this inquiry. For more information about how we use and retain your information, please see our <a href="#">Privacy Policy</a>.</p>
 
             <!-- Submit Button -->
-            <button type="submit" class="submit-btn">Submit</button>
+            <button type="submit" class="btn btn-primary">Submit</button>
         </form>
 
         <!-- Contact Information -->
-        <div class="contact-info">
+        <div class="contact-info mt-5">
             <p><strong>WellWoman</strong></p>
             <p>990 Villa Street, Mountain View, CA 94041</p>
             <p>USA</p>
@@ -98,40 +105,45 @@
         </div>
     </section>
 
-    <script src="script.js"></script>
     <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Services</a>
-            <a href="#">Resources</a>
-            <a href="#">Advice</a>
-            <a href="#">FAQ</a>
-            <a href="#">Review</a>
-            <a href="#">Contact</a>
-            <a href="#">Careers</a>
-
-            <div class="social-icons">
-                <a href="#" class="icon fb" aria-label="Facebook"></a>
-                <a href="#" class="icon ig" aria-label="Instagram"></a>
-                <a href="#" class="icon tiktok" aria-label="TikTok"></a>
-                <a href="#" class="icon twitter" aria-label="Twitter"></a>
-                <a href="#" class="icon linkedin" aria-label="LinkedIn"></a>
+    <footer class="bg-light py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <a href="#">Home</a> |
+                    <a href="#">About</a> |
+                    <a href="#">Services</a> |
+                    <a href="#">Resources</a> |
+                    <a href="#">Advice</a> |
+                    <a href="#">FAQ</a> |
+                    <a href="#">Review</a> |
+                    <a href="#">Contact</a> |
+                    <a href="#">Careers</a>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="social-icons">
+                        <a href="#" class="icon fb">Facebook</a>
+                        <a href="#" class="icon ig">Instagram</a>
+                        <a href="#" class="icon tiktok">TikTok</a>
+                        <a href="#" class="icon twitter">Twitter</a>
+                        <a href="#" class="icon linkedin">LinkedIn</a>
+                    </div>
+                </div>
             </div>
-        </div>
 
-        <hr>
+            <hr>
 
-        <div class="footer-bottom">
-            <div class="footer-links">
-                <a href="#">Terms & Conditions</a>
-                <a href="#">Privacy Policy</a>
+            <div class="footer-bottom text-center">
+                <a href="#">Terms & Conditions</a> |
+                <a href="#">Privacy Policy</a> |
                 <a href="#">Web Accessibility</a>
-                <span>&copy; 2024 WellWomen</span>
+                <p>&copy; 2024 WellWoman</p>
             </div>
         </div>
     </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
