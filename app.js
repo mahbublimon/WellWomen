@@ -1,34 +1,20 @@
 const express = require('express');
 const path = require('path');
-
 const app = express();
-const port = 3000;
 
-// Set EJS as the template engine
-app.set('view engine', 'ejs');
+// Serve static files (HTML, CSS, JS) from the root directory
+app.use(express.static(path.join(__dirname)));
 
-// Serve static files (e.g., CSS, images, JS) from the root directory
-app.use(express.static(__dirname));
-
-// Routes for pages
+// Define routes to serve specific HTML files
 app.get('/', (req, res) => {
-    res.render('home'); // Render `home.ejs`
+    res.sendFile(path.join(__dirname, 'home.html')); // Serve home.html
 });
 
 app.get('/about', (req, res) => {
-    res.render('about'); // Render `about.ejs`
+    res.sendFile(path.join(__dirname, 'about.html')); // Serve about.html
 });
 
-app.get('/services', (req, res) => {
-    res.render('services'); // Render `services.ejs`
-});
-
-// Add routes for other pages (e.g., contact, faq, review)
-app.get('/faq', (req, res) => {
-    res.render('faq'); // Render `faq.ejs`
-});
-
-// Start the server
-app.listen(port, () => {
-    console.log(`Server running at http://localhost:${port}`);
+// Add more routes as needed for other HTML files
+app.listen(3000, () => {
+    console.log('Server running at http://localhost:3000');
 });
