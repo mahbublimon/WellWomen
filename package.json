@@ -1,0 +1,21 @@
+{
+  "name": "wellwomenbootstrap",
+  "version": "1.0.0",
+  "main": "script.js",
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "corepack": "^0.29.4",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "jquery": "^3.7.1",
+    "npm": "^10.9.0",
+    "popper.js": "^1.16.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
