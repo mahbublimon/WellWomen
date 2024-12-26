@@ -123,6 +123,12 @@ body {
     max-width: 80%;
 }
 
+.medium-image {
+    max-width: 100%;
+    width: 300px;
+    height: auto;
+}
+
 .cta-button {
     background-color: #ff7a59;
     color: #fff;
@@ -137,13 +143,6 @@ body {
 
 .cta-button:hover {
     background-color: #ff5722;
-}
-
-/* Responsive Banner */
-@media (max-width: 768px) {
-    .first-block {
-        grid-template-columns: 1fr;
-    }
 }
 
 /* Calculator Section */
@@ -1271,73 +1270,4 @@ hr {
 
 .footer-links a:hover {
     color: #0073e6;
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background-color: #333;
-        position: absolute;
-        top: 100%;
-        left: 0;
-    }
-    .faq-section {
-        width: 90%;
-    }
-    .nav-links li {
-        text-align: center;
-        width: 100%;
-    }
-
-    .toggle-button {
-        display: flex;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .problem-section, .solution-section, .review-grid {
-        grid-template-columns: 1fr;
-    }
-    .nutrition-block {
-        flex-direction: row;
-    }
-
-    .block-image {
-        width: 50%;
-        height: auto;
-    }
-    .advice-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .advice-icon {
-        height: 200px;
-    }
-    .content {
-        width: 50%;
-        padding: 40px;
-        text-align: left;
-    }
-    .login-container {
-        grid-template-columns: 1fr;
-    }
-    .contact-section {
-        width: 90%;
-    }
-    .right-column {
-        max-width: 100%;
-        padding: 20px;
-    }
-    .footer-content, .footer-bottom {
-        flex-direction: column;
-        text-align: center;
-    }
-    .footer-links, .social-icons {
-        margin-top: 10px;
-    }
 }
