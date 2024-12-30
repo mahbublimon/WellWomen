@@ -11,9 +11,6 @@ document.addEventListener("DOMContentLoaded", () => {
         .then(data => {
             document.getElementById('footer-container').innerHTML = data;
         });
-});
-
-document.addEventListener("DOMContentLoaded", () => {
     // FAQ toggle functionality
     const faqItems = document.querySelectorAll(".faq-item");
 
@@ -28,6 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         }
     });
+});
 
     // Story Card Navigation
     let currentStory = 0;
@@ -143,22 +141,26 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById('result').innerText = 
             `Implantation is likely to occur between: ${implantationStart.toDateString()} and ${implantationEnd.toDateString()}`;
     }
-
-    // Due Date Calculator
+    
+    //Due Date Calculator
     function calculateDueDate() {
-        const lastPeriod = new Date(document.getElementById('last-period').value);
-
-        if (isNaN(lastPeriod.getTime())) {
-            document.getElementById('result').innerText = "Please provide a valid date.";
+        const lastPeriodDate = document.getElementById("last-period").value;
+        if (!lastPeriodDate) {
+            document.getElementById("result").innerHTML = `<span class="text-danger">Please enter a valid date.</span>`;
             return;
         }
-
+        const lastPeriod = new Date(lastPeriodDate);
         const dueDate = new Date(lastPeriod);
-        dueDate.setDate(lastPeriod.getDate() + 280); // 40 weeks or 280 days
-
-        document.getElementById('result').innerText = 
-            `Your estimated due date is: ${dueDate.toDateString()}`;
-    }
+        dueDate.setDate(dueDate.getDate() + 280);
+        const options = {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        };
+        const formattedDueDate = dueDate.toLocaleDateString(undefined, options);
+        document.getElementById("result").innerHTML =
+            `<span class="text-success">Your estimated due date is: ${formattedDueDate}</span>`;
+    }  
 
     // IVF Due Date Calculator
     function calculateIVFDueDate() {
@@ -289,5 +291,3 @@ document.addEventListener("DOMContentLoaded", () => {
     function hideTypingIndicator() {
         typingIndicator.style.display = "none";
     }
-});
-
