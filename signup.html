@@ -23,32 +23,28 @@
                     <div class="card shadow-sm">
                         <div class="card-body">
                             <h2 class="card-title text-center mb-4">Create a WellWomen Account</h2>
-                            <p class="text-center mb-4">Enter your details and pick a password that's at least 15
-                                characters, with both lowercase and uppercase letters.</p>
+                            <p class="text-center mb-4">Enter your details and pick a password that's at least 15 characters, with both lowercase and uppercase letters.</p>
 
-                            <form id="signupForm" action="submit-form" method="POST" enctype="multipart/form-data">
+                            <!-- Form starts here -->
+                            <form id="signupForm" action="/signup" method="POST" enctype="multipart/form-data">
                                 <!-- First Name -->
                                 <div class="mb-3">
-                                    <label for="firstName" class="form-label">First Name</label>
-                                    <input type="text" id="firstName" name="firstName" class="form-control" required
-                                        placeholder="Your first name">
+                                    <label for="firstName" class="form-label">Full Name</label>
+                                    <input type="text" id="firstName" name="firstName" class="form-control" required placeholder="Your first name">
                                 </div>
 
                                 <!-- Email -->
                                 <div class="mb-3">
                                     <label for="email" class="form-label">Email</label>
-                                    <input type="email" id="email" name="email" class="form-control" required
-                                        placeholder="Your email address">
+                                    <input type="email" id="email" name="email" class="form-control" required placeholder="Your email address">
                                 </div>
 
                                 <!-- Password -->
                                 <div class="mb-3">
                                     <label for="password" class="form-label">Password</label>
                                     <div class="input-group">
-                                        <input type="password" id="password" name="password" class="form-control"
-                                            required placeholder="Create a password">
-                                        <span class="input-group-text" onclick="togglePassword('password')"><i
-                                                class="bi bi-eye"></i></span>
+                                        <input type="password" id="password" name="password" class="form-control" required placeholder="Create a password">
+                                        <span class="input-group-text" onclick="togglePassword('password')"><i class="bi bi-eye"></i></span>
                                     </div>
                                 </div>
 
@@ -56,36 +52,29 @@
                                 <div class="mb-3">
                                     <label for="confirmPassword" class="form-label">Confirm Password</label>
                                     <div class="input-group">
-                                        <input type="password" id="confirmPassword" name="confirmPassword"
-                                            class="form-control" required placeholder="Confirm your password">
-                                        <span class="input-group-text" onclick="togglePassword('confirmPassword')"><i
-                                                class="bi bi-eye"></i></span>
+                                        <input type="password" id="confirmPassword" name="confirmPassword" class="form-control" required placeholder="Confirm your password">
+                                        <span class="input-group-text" onclick="togglePassword('confirmPassword')"><i class="bi bi-eye"></i></span>
                                     </div>
                                 </div>
 
                                 <!-- NID/Passport Upload -->
                                 <div class="mb-3">
                                     <label for="nidPassport" class="form-label">Upload NID/Passport (Required)</label>
-                                    <input type="file" id="nidPassport" name="nidPassport" class="form-control"
-                                        required>
+                                    <input type="file" id="nidPassport" name="nidPassport" class="form-control" required>
                                 </div>
 
                                 <!-- Terms, Privacy, and Data Processing Agreements -->
                                 <div class="mb-3">
                                     <input type="checkbox" id="terms" name="terms" required>
-                                    <label for="terms" class="form-check-label">I agree to WellWomen's <a
-                                            href="termscondition">Terms & Condition</a></label>
+                                    <label for="terms" class="form-check-label">I agree to WellWomen's <a href="termscondition">Terms & Condition</a></label>
                                 </div>
                                 <div class="mb-3">
                                     <input type="checkbox" id="privacy" name="privacy" required>
-                                    <label for="privacy" class="form-check-label">I have read WellWomen's <a
-                                            href="privacy-policy">Privacy Policy</a></label>
+                                    <label for="privacy" class="form-check-label">I have read WellWomen's <a href="privacy-policy">Privacy Policy</a></label>
                                 </div>
                                 <div class="mb-3">
                                     <input type="checkbox" id="dataProcessing" name="dataProcessing" required>
-                                    <label for="dataProcessing" class="form-check-label">I agree to WellWomen processing
-                                        the health data I choose to share with the app, so they can provide their
-                                        service.</label>
+                                    <label for="dataProcessing" class="form-check-label">I agree to WellWomen processing the health data I choose to share with the app, so they can provide their service.</label>
                                 </div>
 
                                 <!-- Submit Button -->

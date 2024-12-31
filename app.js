@@ -1,16 +1,35 @@
 const express = require('express');
 const path = require('path');
+const fs = require('fs');
+const bodyParser = require('body-parser');
+const bcrypt = require('bcryptjs');
+const multer = require('multer');
+const db = require('./db'); // Assume db is correctly configured
+
 const app = express();
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 // Serve static files like CSS, JS, and images
 app.use(express.static(path.join(__dirname)));
 
-// Route for home page
+// Set up file upload storage using Multer
+const storage = multer.diskStorage({
+    destination: (req, file, cb) => {
+        cb(null, './uploads/');
+    },
+    filename: (req, file, cb) => {
+        cb(null, Date.now() + path.extname(file.originalname));
+    }
+});
+
+const upload = multer({ storage: storage });
+
+// General Routes for Pages
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'home.html'));
 });
 
-// Define routes for other pages
 app.get('/about', (req, res) => {
     res.sendFile(path.join(__dirname, 'about.html'));
 });
@@ -44,7 +63,7 @@ app.get('/contact', (req, res) => {
 });
 
 app.get('/dashboard', (req, res) => {
-    res.sendFile(path.join(__dirname, 'dashboard.html'));
+    res.sendFile(`${__dirname}/dashboard.html`);
 });
 
 app.get('/due-date-calculator', (req, res) => {
@@ -127,7 +146,59 @@ app.get('/videos', (req, res) => {
     res.sendFile(path.join(__dirname, 'videos.html'));
 });
 
-// Start the server
+// Dashboard and User Profile Routes
+app.get('/user-profile', (req, res) => {
+    res.json(userData); // Send user data to frontend
+});
+
+// Signup Route
+app.post('/signup', upload.single('nidPassport'), async (req, res) => {
+    const { firstName, email, password, confirmPassword, terms, privacy, dataProcessing } = req.body;
+
+    // Check if passwords match
+    if (password !== confirmPassword) {
+        return res.status(400).send("Passwords do not match.");
+    }
+
+    // Check if the email is already in use
+    try {
+        const [rows] = await db.query('SELECT * FROM users WHERE email = ?', [email]);
+
+        if (rows.length > 0) {
+            return res.status(400).send("Email is already in use.");
+        }
+
+        // Encrypt the password
+        const hashedPassword = await bcrypt.hash(password, 10);
+
+        // Handle file upload (NID/Passport)
+        const filePath = req.file ? req.file.path : null;
+
+        // Save user data to database
+        const [result] = await db.query('INSERT INTO users (first_name, email, password, nid_passport) VALUES (?, ?, ?, ?)', 
+            [firstName, email, hashedPassword, filePath]);
+
+        res.status(200).send("Account created successfully.");
+    } catch (error) {
+        console.error(error);
+        res.status(500).send("An error occurred. Please try again.");
+    }
+});
+
+// Subscription Handling (Example)
+app.post('/subscription', (req, res) => {
+    const { subscriptionType, paymentMethod } = req.body;
+    userData.subscription = {
+        type: subscriptionType,
+        paymentMethod,
+        validUntil: new Date(new Date().setMonth(new Date().getMonth() + 1)).toISOString().slice(0, 10),
+    };
+
+    fs.writeFileSync('./user.json', JSON.stringify(userData, null, 4));
+    res.json({ message: 'Subscription updated successfully' });
+});
+
+// Start Server
 const PORT = 3000;
 app.listen(PORT, () => {
     console.log(`Server running at http://localhost:${PORT}`);
