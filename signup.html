@@ -7,91 +7,82 @@
     <title>WellWomen - Create Account</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Add Bootstrap Icons -->
+    <!-- Bootstrap Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="style.css" rel="stylesheet">
 </head>
 
 <body>
     <!-- Navbar Placeholder -->
     <div id="navbar-container"></div>
 
-    <!-- Signup Form -->
-    <section class="signup-form py-5">
+    <!-- Signup and OTP Forms -->
+    <section class="form-section py-5">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-8 col-lg-6">
                     <div class="card shadow-sm">
                         <div class="card-body">
-                            <h2 class="card-title text-center mb-4">Create a WellWomen Account</h2>
-                            <p class="text-center mb-4">Enter your details and pick a password that's at least 15 characters, with both lowercase and uppercase letters.</p>
-
-                            <!-- Form starts here -->
-                            <form id="signupForm" action="/signup" method="POST" enctype="multipart/form-data">
-                                <!-- First Name -->
-                                <div class="mb-3">
-                                    <label for="firstName" class="form-label">Full Name</label>
-                                    <input type="text" id="firstName" name="firstName" class="form-control" required placeholder="Your first name">
-                                </div>
-
-                                <!-- Email -->
-                                <div class="mb-3">
-                                    <label for="email" class="form-label">Email</label>
-                                    <input type="email" id="email" name="email" class="form-control" required placeholder="Your email address">
-                                </div>
-
-                                <!-- Password -->
-                                <div class="mb-3">
-                                    <label for="password" class="form-label">Password</label>
-                                    <div class="input-group">
-                                        <input type="password" id="password" name="password" class="form-control" required placeholder="Create a password">
-                                        <span class="input-group-text" onclick="togglePassword('password')"><i class="bi bi-eye"></i></span>
+                            <!-- Signup Form -->
+                            <div id="signupFormContainer">
+                                <h2 class="card-title text-center mb-4">Create a WellWomen Account</h2>
+                                <p class="text-center mb-4">
+                                    Enter your details and pick a password that's at least 15 characters, with both lowercase and uppercase letters.
+                                </p>
+                                <form id="signupForm" action="/signup" method="POST" enctype="multipart/form-data">
+                                    <div class="mb-3">
+                                        <label for="firstName" class="form-label">Full Name</label>
+                                        <input type="text" id="firstName" name="firstName" class="form-control" required placeholder="Your full name">
                                     </div>
-                                </div>
-
-                                <!-- Confirm Password -->
-                                <div class="mb-3">
-                                    <label for="confirmPassword" class="form-label">Confirm Password</label>
-                                    <div class="input-group">
-                                        <input type="password" id="confirmPassword" name="confirmPassword" class="form-control" required placeholder="Confirm your password">
-                                        <span class="input-group-text" onclick="togglePassword('confirmPassword')"><i class="bi bi-eye"></i></span>
+                                    <div class="mb-3">
+                                        <label for="email" class="form-label">Email</label>
+                                        <input type="email" id="email" name="email" class="form-control" required placeholder="Your email address">
                                     </div>
-                                </div>
+                                    <div class="mb-3">
+                                        <label for="password" class="form-label">Password</label>
+                                        <div class="input-group">
+                                            <input type="password" id="password" name="password" class="form-control" required placeholder="Create a password">
+                                            <span class="input-group-text" onclick="togglePassword('password')"><i class="bi bi-eye"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="confirmPassword" class="form-label">Confirm Password</label>
+                                        <div class="input-group">
+                                            <input type="password" id="confirmPassword" name="confirmPassword" class="form-control" required placeholder="Confirm your password">
+                                            <span class="input-group-text" onclick="togglePassword('confirmPassword')"><i class="bi bi-eye"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="nidPassport" class="form-label">Upload NID/Passport (Required)</label>
+                                        <input type="file" id="nidPassport" name="nidPassport" class="form-control" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <input type="checkbox" id="terms" name="terms" required>
+                                        <label for="terms" class="form-check-label">I agree to WellWomen's <a href="termscondition">Terms & Condition</a></label>
+                                    </div>
+                                    <div class="mb-3 text-center">
+                                        <button type="submit" class="btn btn-primary w-100">Create Account</button>
+                                    </div>
+                                    <p class="text-center">Already have an account? <a href="login">Login here</a></p>
+                                </form>
+                            </div>
 
-                                <!-- NID/Passport Upload -->
-                                <div class="mb-3">
-                                    <label for="nidPassport" class="form-label">Upload NID/Passport (Required)</label>
-                                    <input type="file" id="nidPassport" name="nidPassport" class="form-control" required>
-                                </div>
-
-                                <!-- Terms, Privacy, and Data Processing Agreements -->
-                                <div class="mb-3">
-                                    <input type="checkbox" id="terms" name="terms" required>
-                                    <label for="terms" class="form-check-label">I agree to WellWomen's <a href="termscondition">Terms & Condition</a></label>
-                                </div>
-                                <div class="mb-3">
-                                    <input type="checkbox" id="privacy" name="privacy" required>
-                                    <label for="privacy" class="form-check-label">I have read WellWomen's <a href="privacy-policy">Privacy Policy</a></label>
-                                </div>
-                                <div class="mb-3">
-                                    <input type="checkbox" id="dataProcessing" name="dataProcessing" required>
-                                    <label for="dataProcessing" class="form-check-label">I agree to WellWomen processing the health data I choose to share with the app, so they can provide their service.</label>
-                                </div>
-
-                                <!-- Submit Button -->
-                                <div class="mb-3 text-center">
-                                    <button type="submit" class="btn btn-primary w-100">Create Account</button>
-                                </div>
-
-                                <p class="text-center">Already have an account? <a href="login">Login here</a></p>
-                            </form>
-
-                            <!-- Social Media Signup -->
-                            <div class="text-center mt-4">
-                                <p>Or sign up with:</p>
-                                <button class="btn social-button google">Google</button>
-                                <button class="btn social-button microsoft">Microsoft</button>
-                                <button class="btn social-button apple">Apple ID</button>
-                                <button class="btn social-button yahoo">Yahoo</button>
+                            <!-- OTP Form (hidden initially) -->
+                            <div id="otpFormContainer" style="display: none;">
+                                <h2 class="card-title text-center mb-4">Verify Your Account</h2>
+                                <p class="text-center text-success mb-4">
+                                    OTP sent to your email. Please enter it to confirm your account.
+                                </p>
+                                <form id="otpForm" method="POST">
+                                    <div class="mb-3">
+                                        <label for="otp" class="form-label">One-Time Password (OTP)</label>
+                                        <input type="text" id="otp" name="otp" class="form-control" required placeholder="Enter OTP">
+                                    </div>
+                                    <div class="mb-3 text-center">
+                                        <button type="submit" class="btn btn-primary w-100">Verify OTP</button>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>

@@ -291,3 +291,122 @@ document.addEventListener("DOMContentLoaded", () => {
     function hideTypingIndicator() {
         typingIndicator.style.display = "none";
     }
+
+    // Function to fetch articles dynamically and render them
+function fetchArticles(apiEndpoint, containerId) {
+    fetch(apiEndpoint)
+        .then(response => response.json())
+        .then(data => {
+            const container = document.getElementById(containerId);
+            container.innerHTML = data.slice(0, 3).map(article => `
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="${article.image || 'placeholder.jpg'}" class="card-img-top" alt="${article.title}">
+                        <div class="card-body">
+                            <h5 class="card-title">${article.title}</h5>
+                            <p class="card-text">${article.summary}</p>
+                            <button class="btn btn-primary" onclick="viewArticle('${article.id}')">Read More</button>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        })
+        .catch(err => console.error(`Error fetching articles from ${apiEndpoint}:`, err));
+}
+
+// Function to view article details (placeholder)
+function viewArticle(articleId) {
+    alert(`Viewing article ${articleId}`);
+}
+
+// Load articles on page load
+document.addEventListener('DOMContentLoaded', () => {
+    fetchArticles('/api/pregnancy', 'pregnancy-articles');
+    fetchArticles('/api/health', 'health-articles');
+    fetchArticles('/api/birth', 'birth-articles');
+});
+// Fetch articles from the APIs and populate rows
+async function fetchArticles(apiUrl, containerId) {
+    try {
+        const response = await fetch(apiUrl);
+        const articles = await response.json();
+
+        const container = document.getElementById(containerId);
+        container.innerHTML = articles.map(article => `
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="${article.image}" alt="${article.title} Image" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">${article.title}</h5>
+                        <p class="card-text">${article.description}</p>
+                        <button class="btn btn-outline-primary" onclick="showArticle('${article.title}', '${article.content}')">Read More</button>
+                    </div>
+                </div>
+            </div>
+        `).join('');
+    } catch (error) {
+        console.error('Error fetching articles:', error);
+    }
+}
+
+// Show article content in a modal
+function showArticle(title, content) {
+    const modalTitle = document.getElementById('articleModalLabel');
+    const modalContent = document.getElementById('articleModalContent');
+    modalTitle.textContent = title;
+    modalContent.innerHTML = content;
+    const modal = new bootstrap.Modal(document.getElementById('articleModal'));
+    modal.show();
+}
+
+// Load articles on page load
+document.addEventListener('DOMContentLoaded', () => {
+    fetchArticles('api/health.js', 'health-articles');
+    fetchArticles('api/birth.js', 'birth-articles');
+    fetchArticles('api/pregnancy.js', 'pregnancy-articles');
+});
+
+function togglePassword(id) {
+    const passwordField = document.getElementById(id);
+    const type = passwordField.type === 'password' ? 'text' : 'password';
+    passwordField.type = type;
+}
+
+// Handle the signup form submission
+document.getElementById("signupForm").addEventListener("submit", function (e) {
+    e.preventDefault();  // Prevent form submission
+
+    fetch("/signup", {
+        method: "POST",
+        body: new FormData(this),
+    })
+        .then((response) => {
+            if (response.ok) {
+                // Hide signup form and show OTP form with a message
+                document.getElementById("signupFormContainer").style.display = "none";
+                document.getElementById("otpFormContainer").style.display = "block";
+            } else {
+                alert("Error signing up. Please try again.");
+            }
+        })
+        .catch((error) => console.error("Error:", error));
+});
+
+document.getElementById("otpForm").addEventListener("submit", function (e) {
+    e.preventDefault();  // Prevent form submission
+
+    fetch("/verify-otp", {
+        method: "POST",
+        body: new FormData(this),
+    })
+        .then((response) => response.json())
+        .then((data) => {
+            if (data.success) {
+                // Redirect to login page upon successful OTP verification
+                window.location.href = "login.html";
+            } else {
+                alert("Invalid OTP. Please try again.");
+            }
+        })
+        .catch((error) => console.error("Error:", error));
+});
