@@ -9,11 +9,79 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Add Bootstrap Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="style.css" rel="stylesheet">
 </head>
 
 <body>
     <!-- Navbar Placeholder -->
     <div id="navbar-container"></div>
+
+    <!-- Introduction Section -->
+    <div class="container my-5">
+        <h2 class="text-center mb-4">What Our Users Say</h2>
+        <p class="text-center">
+            At WellWoman, we strive to provide the best care and services. Here's what some of our users have to say
+            about their experiences with us.
+        </p>
+    </div>
+
+    <!-- User Reviews Section -->
+    <div class="container my-5">
+        <div id="userReviewsCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="d-flex justify-content-center">
+                        <div class="card shadow-sm" style="width: 18rem;">
+                            <div class="card-body">
+                                <p class="card-text">
+                                    "WellWoman provided me with the support and care I needed during my journey. Highly
+                                    recommend their services!"
+                                </p>
+                                <h5 class="card-title text-end">- Jane Doe</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="d-flex justify-content-center">
+                        <div class="card shadow-sm" style="width: 18rem;">
+                            <div class="card-body">
+                                <p class="card-text">
+                                    "Amazing team and excellent services. I always feel heard and supported."
+                                </p>
+                                <h5 class="card-title text-end">- Sarah Smith</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="d-flex justify-content-center">
+                        <div class="card shadow-sm" style="width: 18rem;">
+                            <div class="card-body">
+                                <p class="card-text">
+                                    "The best healthcare experience I've had. Thank you, WellWoman!"
+                                </p>
+                                <h5 class="card-title text-end">- Emily Johnson</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#userReviewsCarousel"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#userReviewsCarousel"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
 
     <!-- Footer Placeholder -->
     <div id="footer-container"></div>
