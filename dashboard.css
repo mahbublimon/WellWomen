@@ -1,235 +1,45 @@
-/* Import Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap');
-
-/* General Reset */
-body {
-    margin: 0;
-    font-family: 'Reem Kufi', sans-serif;
-    background-color: #f9f9f9;
-}
-
-/* Dashboard Layout */
-.dashboard-container {
-    display: flex;
-    height: 100vh;
-}
-
-/* Sidebar Menu */
+/* Sidebar Styles */
 .sidebar {
-    background-color: #4CAF50;
+    width: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #f8f9fa;
+    padding-top: 20px;
+    transition: width 0.3s;
+}
+
+.sidebar:hover {
     width: 250px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px 0;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
 }
 
 .menu-item {
-    margin: 20px 0;
+    text-decoration: none;
+    color: #333;
+    font-size: 24px;
+    display: block;
+    padding: 10px 0;
     text-align: center;
 }
 
-.menu-item img {
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
+.menu-item:hover {
+    color: #007bff;
 }
 
-/* Main Content */
 .main-content {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
+    margin-left: 80px;
+    transition: margin-left 0.3s;
 }
 
-/* Top Section */
-.top-section {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
+.main-content.expanded {
+    margin-left: 250px;
 }
 
-.nav-button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    background-color: #007bff;
-    color: white;
-    font-size: 14px;
-    cursor: pointer;
+.section {
+    display: none;
 }
 
-.nav-button:hover {
-    background-color: #0056b3;
-}
-
-/* Content Area */
-.content-area {
-    display: flex;
-    gap: 20px;
-}
-
-/* Left Content */
-.left-content {
-    flex: 2;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.appointment-box {
-    background-color: white;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.appointment-item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 0;
-    border-bottom: 1px solid #f0f0f0;
-}
-
-.appointment-item span {
-    font-size: 14px;
-}
-
-.appointment-actions {
-    display: flex;
-    gap: 5px;
-}
-
-.appointment-button {
-    padding: 5px 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #007bff;
-    color: white;
-    font-size: 12px;
-    cursor: pointer;
-}
-
-.appointment-button:hover {
-    background-color: #0056b3;
-}
-
-/* Right Content: Chat */
-.right-content {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-}
-
-.chat-box {
-    background-color: white;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-.chat-messages {
-    flex: 1;
-    overflow-y: auto;
-    margin-bottom: 10px;
-    border-bottom: 1px solid #f0f0f0;
-    padding-bottom: 10px;
-}
-
-.chat-messages p {
-    font-size: 14px;
-    margin: 5px 0;
-}
-
-.chat-input {
-    display: flex;
-    gap: 10px;
-}
-
-.chat-input input {
-    flex: 1;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.send-button {
-    padding: 10px 15px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.send-button:hover {
-    background-color: #45a049;
-}
-
-/* Online Users and Typing Indicator */
-#online-users {
-    color: green;
-    font-weight: bold;
-}
-
-.typing-indicator {
-    font-style: italic;
-    color: gray;
-    margin: 10px 0;
-}
-
-/* Chat Box Styling (Consistency) */
-.chat-box {
-    background-color: white;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    height: 60vh;
-    display: flex;
-    flex-direction: column;
-}
-
-.chat-messages {
-    flex: 1;
-    overflow-y: auto;
-    margin-bottom: 10px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-}
-
-.chat-messages p {
-    margin: 5px 0;
-}
-
-.chat-input {
-    display: flex;
-    gap: 10px;
-}
-
-.chat-input input {
-    flex: 1;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.chat-input button {
-    padding: 10px 15px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.chat-input button:hover {
-    background-color: #0056b3;
+.section.active {
+    display: block;
 }

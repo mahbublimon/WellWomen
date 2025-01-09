@@ -10,14 +10,14 @@
 </head>
 
 <body>
-    <div class="d-flex">
+    <div class="d-flex" id="dashboard-container">
         <!-- Sidebar -->
         <aside class="bg-light p-3" style="width: 250px;">
             <nav class="menu">
-                <a href="dashboard.html" class="menu-item d-block mb-3">Dashboard</a>
-                <a href="appointments.html" class="menu-item d-block mb-3">Appointments</a>
-                <a href="medical-history.html" class="menu-item d-block mb-3">Medical History</a>
-                <a href="community.html" class="menu-item d-block mb-3">Community</a>
+                <a href="/dashboard" class="menu-item d-block mb-3">Dashboard</a>
+                <a href="/appointments" class="menu-item d-block mb-3">Appointments</a>
+                <a href="/medical-history" class="menu-item d-block mb-3">Medical History</a>
+                <a href="/community" class="menu-item d-block mb-3">Community</a>
             </nav>
         </aside>
 
@@ -31,45 +31,78 @@
                     </button>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="#">Settings</a></li>
-                        <li><a class="dropdown-item" href="#">Log Out</a></li>
+                        <li><a class="dropdown-item" href="/logout">Log Out</a></li>
                     </ul>
                 </div>
             </div>
 
+            <!-- User Stats Section -->
             <div class="row mb-4">
                 <div class="col-md-3">
                     <div class="card p-3">
                         <h5>Weight</h5>
-                        <p id="weight"></p>
+                        <p id="weight">Loading...</p>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="card p-3">
                         <h5>BMI</h5>
-                        <p id="bmi"></p>
+                        <p id="bmi">Loading...</p>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="card p-3">
                         <h5>Last Period</h5>
-                        <p id="lastPeriod"></p>
+                        <p id="lastPeriod">Loading...</p>
                     </div>
                 </div>
             </div>
 
-            <div class="row">
+            <!-- Subscription & Payment Section -->
+            <div class="row mb-4">
                 <div class="col-md-6">
                     <div class="card p-3">
                         <h5>Subscription Info</h5>
-                        <p id="subscription"></p>
+                        <p id="subscription">Loading...</p>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="card p-3">
                         <h5>Payment Method</h5>
-                        <p id="paymentMethod"></p>
+                        <p id="paymentMethod">Loading...</p>
                     </div>
                 </div>
+            </div>
+
+            <!-- Calculator Section -->
+            <div class="card p-3">
+                <h5>Health Calculators</h5>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <a href="/ovulation-calculator" class="d-block">Ovulation Calculator</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="/hcg-calculator" class="d-block">hCG Calculator</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="/pregnancy-test-calculator" class="d-block">Pregnancy Test Calculator</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="/period-calculator" class="d-block">Period Calculator</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="/implantation-calculator" class="d-block">Implantation Calculator</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="/pregnancy-due-date-calculator" class="d-block">Pregnancy Due Date Calculator</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="/ivf-due-date-calculator" class="d-block">IVF/FET Due Date Calculator</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="/ultrasound-due-date-calculator" class="d-block">Due Date Calculator by Ultrasound</a>
+                    </li>
+                </ul>
             </div>
         </main>
     </div>

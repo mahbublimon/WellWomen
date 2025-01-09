@@ -372,41 +372,34 @@ function togglePassword(id) {
     passwordField.type = type;
 }
 
-// Handle the signup form submission
-document.getElementById("signupForm").addEventListener("submit", function (e) {
-    e.preventDefault();  // Prevent form submission
+document.getElementById("loginForm").addEventListener("submit", async function (e) {
+    e.preventDefault();
 
-    fetch("/signup", {
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+
+    const response = await fetch("/login", {
         method: "POST",
-        body: new FormData(this),
-    })
-        .then((response) => {
-            if (response.ok) {
-                // Hide signup form and show OTP form with a message
-                document.getElementById("signupFormContainer").style.display = "none";
-                document.getElementById("otpFormContainer").style.display = "block";
-            } else {
-                alert("Error signing up. Please try again.");
-            }
-        })
-        .catch((error) => console.error("Error:", error));
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ email, password })
+    });
+
+    const result = await response.json();
+
+    if (response.status === 200) {
+        window.location.href = "/dashboard";  // Redirect to dashboard or home page
+    } else {
+        alert(result.message);  // Show error message
+    }
 });
 
-document.getElementById("otpForm").addEventListener("submit", function (e) {
-    e.preventDefault();  // Prevent form submission
+// Handle "Accept" button click to join the conference
+const joinConference = (requestId) => {
+    const request = requests.find(req => req.id === requestId);
+    alert(`You are joining the conference with ${request.patientName}.`);
 
-    fetch("/verify-otp", {
-        method: "POST",
-        body: new FormData(this),
-    })
-        .then((response) => response.json())
-        .then((data) => {
-            if (data.success) {
-                // Redirect to login page upon successful OTP verification
-                window.location.href = "login.html";
-            } else {
-                alert("Invalid OTP. Please try again.");
-            }
-        })
-        .catch((error) => console.error("Error:", error));
-});
+    // Redirect to the conference page, passing the consultant's name and patient details in the URL
+    window.location.href = `conference.html?consultant=${encodeURIComponent(request.consultant)}&patient=${encodeURIComponent(request.patientName)}&meetingId=${requestId}`;
+};
