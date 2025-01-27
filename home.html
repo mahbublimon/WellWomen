@@ -11,6 +11,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="style.css" rel="stylesheet">
+
+    <!-- Leaflet.js CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
 </head>
 
 <body>
@@ -128,6 +131,30 @@
         </div>
     </section>
 
+    <!-- Ask Location for Sanitary Napkin Hub -->
+    <section class="container py-5">
+        <h3 class="text-center mb-4">Find Nearest Sanitary Napkin Hub</h3>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form id="locationForm">
+                    <div class="mb-3">
+                        <label for="location" class="form-label">Enter Your Location:</label>
+                        <input type="text" class="form-control" id="location" placeholder="City or Zip Code" required>
+                    </div>
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-success">Find Nearest Hub</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- OpenStreetMap Section -->
+    <section class="container py-5">
+        <h3 class="text-center mb-4">Nearest Sanitary Napkin Hub</h3>
+        <div id="map" style="height: 400px; width: 100%;"></div>
+    </section>
+
     <!-- FAQ Section -->
     <section class="bg-light py-5">
         <div class="container">
@@ -169,6 +196,65 @@
 
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Leaflet.js JavaScript -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+    <script>
+        // Initialize Leaflet Map
+        var map = L.map('map').setView([51.505, -0.09], 13); // Default coordinates (can be changed if location permission is granted)
+
+        // Set OpenStreetMap Tile Layer
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        // Marker for the user's current location
+        var marker = L.marker([51.505, -0.09]).addTo(map)
+            .bindPopup("Your Location")
+            .openPopup();
+
+        // Function to get the user's location
+        function getUserLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function(position) {
+                    var lat = position.coords.latitude;
+                    var lon = position.coords.longitude;
+
+                    // Center map on user's location
+                    map.setView([lat, lon], 13);
+                    marker.setLatLng([lat, lon]); // Update marker position
+                    marker.bindPopup("Your Location: " + lat.toFixed(2) + ", " + lon.toFixed(2)).openPopup();
+                }, function() {
+                    alert("Unable to retrieve your location.");
+                });
+            } else {
+                alert("Geolocation is not supported by this browser.");
+            }
+        }
+
+        // Ask for location permission and get the user's location
+        window.onload = function() {
+            getUserLocation();
+        };
+
+        // Handle the location input and dynamically update the map
+        document.getElementById('locationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            var location = document.getElementById('location').value;
+
+            // Example: You can integrate a geocoding API like Nominatim or a custom search API to fetch coordinates based on location input
+            // For demonstration, assume coordinates for "New York" (This part should be dynamic)
+
+            if (location.toLowerCase() === "new york") {
+                var lat = 40.7128;  // Latitude of New York
+                var lon = -74.0060; // Longitude of New York
+                map.setView([lat, lon], 13); // Center map on new coordinates
+                marker.setLatLng([lat, lon]); // Update marker position
+            }
+        });
+    </script>
+
 </body>
 
 </html>
